@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Swap - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book-swap.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-regular fa-heart"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>Book Swap</h1>
+                        <p>Exchange books with fellow readers</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </header>
+
+            <!-- Book Swap Content -->
+            <div class="dashboard-scroll">
+                <section class="swap-section">
+                    <div class="swap-header-row">
+                        <h3>Book Swap</h3>
+                        <div class="points-badge">
+                            <i class="fa-solid fa-coins"></i> 0 points
+                        </div>
+                    </div>
+
+                    <div class="swap-tabs">
+                        <button class="tab-btn active">Available</button>
+                        <button class="tab-btn">Requests</button>
+                        <button class="tab-btn">History</button>
+                    </div>
+
+                    <div class="upload-cta-bar">
+                        <button class="btn-upload-cta" id="upload-book-btn">
+                            <i class="fa-solid fa-plus-circle"></i> Add New Book
+                        </button>
+                    </div>
+
+                    <div id="tab-available" class="tab-content active">
+                        <div id="swap-pool-container" class="book-list">
+                            <!-- Books will be loaded dynamically from the backend -->
+                            <div class="loading-state">
+                                <i class="fa-solid fa-spinner fa-spin"></i>
+                                <p>Loading available books...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Requests Tab Content -->
+                    <div id="tab-requests" class="tab-content hidden">
+                        <div id="swap-requests-container">
+                            <!-- Requests will be loaded dynamically -->
+                            <div class="empty-state">
+                                <i class="fa-solid fa-inbox"></i>
+                                <h3>No swap requests yet</h3>
+                                <p>Your incoming and outgoing requests will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History Tab Content -->
+                    <div id="tab-history" class="tab-content hidden">
+                        <div id="swap-history-container">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <h3>No swap history yet</h3>
+                                <p>Your completed swaps will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- Swap Request Modal -->
+    <!-- Swap Request Modal -->
+    <div id="swap-modal" class="modal-overlay hidden">
+        <div class="modal-content-card swap-modal-card">
+            <div class="modal-header">
+                <h2>Send Swap Request</h2>
+                <button class="btn-close-modal" id="close-swap-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body-padded">
+                <p class="requesting-text">Requesting: <span id="swap-target-book" class="highlight-text">"The Silent
+                        Patient" by Alex Michaelides</span></p>
+
+                <form id="swap-request-form">
+                    <div class="form-group">
+                        <label for="your-book-title">Your Book Title *</label>
+                        <input type="text" id="your-book-title" placeholder="Enter the title of your book..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="your-book-author">Book Author *</label>
+                        <input type="text" id="your-book-author" placeholder="Enter the author's name..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comm-method">Communication Method *</label>
+                        <select id="comm-method">
+                            <option value="Email">Email</option>
+                            <option value="Discord">Discord</option>
+                            <option value="Phone">Phone</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-info">Contact Information *</label>
+                        <input type="text" id="contact-info" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-message">Message (Optional)</label>
+                        <textarea id="swap-message" rows="3"
+                            placeholder="Add a personal message about your swap request..."></textarea>
+                    </div>
+
+                    <div class="modal-actions-row">
+                        <button type="submit" class="btn-primary btn-orange block-btn">
+                            <i class="fa-solid fa-arrows-rotate"></i> Send Request
+                        </button>
+                        <button type="button" class="btn-secondary-outline block-btn"
+                            id="cancel-swap-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Book Modal -->
+    <div id="upload-book-modal" class="modal-overlay hidden">
+        <div class="modal-content-card swap-upload-card">
+            <div class="modal-header">
+                <h3>Upload Your Book</h3>
+                <button class="btn-close-modal" id="close-upload-book-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body-padded">
+                <p class="modal-subtitle">Add a book from your collection to make it available for swapping</p>
+
+                <form id="swap-upload-form">
+                    <div class="form-group">
+                        <label for="swap-up-title">Book Title *</label>
+                        <input type="text" id="swap-up-title" placeholder="Enter the book title..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-up-author">Author *</label>
+                        <input type="text" id="swap-up-author" placeholder="Enter the author's name..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-up-genre">Genre *</label>
+                        <div class="select-wrapper">
+                            <select id="swap-up-genre" required>
+                                <option value="" disabled selected>Select Genre</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Non-Fiction">Non-Fiction</option>
+                                <option value="Biography">Biography</option>
+                                <option value="History">History</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-up-condition">Condition *</label>
+                        <div class="select-wrapper">
+                            <select id="swap-up-condition" required>
+                                <option value="Good" selected>Good</option>
+                                <option value="New">New</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Poor">Poor</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-up-location">Location *</label>
+                        <input type="text" id="swap-up-location" placeholder="e.g., Downtown, Midtown..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="swap-up-cover">Cover Image URL (Optional)</label>
+                        <input type="url" id="swap-up-cover" placeholder="https://example.com/cover.jpg">
+                        <p class="form-hint">Leave blank to use default cover</p>
+                    </div>
+
+                    <div class="modal-actions-row">
+                        <button type="submit" class="btn-primary btn-navy block-btn">
+                            <i class="fa-solid fa-upload"></i> Add Book
+                        </button>
+                        <button type="button" class="btn-secondary-outline block-btn"
+                            id="cancel-upload-book-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

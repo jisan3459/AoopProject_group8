@@ -1,0 +1,792 @@
+/* ============================
+   Book Swap Styles
+   ============================ */
+
+.swap-section {
+    padding: 2rem 2.5rem;
+}
+
+.swap-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.swap-header-row h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.points-badge {
+    background: #FFFAF0;
+    border: 1px solid #FFE4C4;
+    color: #E87A38;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.swap-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: #E87A38;
+    border-bottom-color: #E87A38;
+    font-weight: 600;
+}
+
+.upload-banner {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-upload {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.swap-card-container {
+    margin-bottom: 1.5rem;
+}
+
+.swap-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px 12px 0 0;
+    /* Rounded top only if btn is attached */
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.book-cover-wrapper {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.25rem;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.points-cost {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 600;
+    color: #E87A38;
+    font-size: 0.9rem;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.book-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.rating-pill {
+    background: #FFF7ED;
+    color: #F97316;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tag-pill {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag-pill.condition-new {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.tag-pill.condition-good {
+    background: #FFFBEB;
+    color: #D97706;
+}
+
+.book-location {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-owner {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.owner-label {
+    color: #64748b;
+}
+
+.user-badge {
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.badge-steel {
+    background: #E2E8F0;
+    color: #475569;
+}
+
+.badge-legendary {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.badge-bronze {
+    background: #FFF7ED;
+    color: #EA580C;
+}
+
+.badge-iron {
+    background: #F1F5F9;
+    color: #64748b;
+}
+
+.btn-swap-request {
+    width: 100%;
+    background: #E87A38;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0 0 12px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* Centered by default */
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+    position: relative;
+}
+
+.btn-swap-request:hover {
+    background: #d66a2e;
+}
+
+.btn-swap-request .right-cost {
+    position: absolute;
+    right: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Adjust swap card to have no bottom radius if button is attached */
+.swap-card {
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+/* If button is not attached (e.g. mobile card), or for different layout */
+/* But per design, it looks like a full bar at bottom */
+
+@media (max-width: 600px) {
+    .swap-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-details {
+        width: 100%;
+    }
+
+    .book-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .book-meta-tags,
+    .book-location,
+    .book-owner {
+        justify-content: center;
+    }
+}
+
+/* ============================
+   Requests Tab Styles
+   ============================ */
+
+.req-section-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.req-section-label:first-child {
+    margin-top: 0;
+}
+
+.request-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.req-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.req-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.req-thumb {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.req-title-group h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.2rem;
+}
+
+.req-title-group p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-transform: lowercase;
+}
+
+.status-badge.pending {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.status-badge.accepted {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.req-offer-box {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.offer-row {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.offer-label {
+    color: #64748b;
+    font-weight: 500;
+    min-width: 60px;
+}
+
+.offer-val {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.offer-msg p {
+    color: #475569;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.req-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.req-actions {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-req {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-req.accept {
+    background: #1e293b;
+    color: white;
+}
+
+.btn-req.accept:hover {
+    background: #334155;
+}
+
+.btn-req.decline {
+    background: white;
+    color: #64748b;
+}
+
+.btn-req.decline:hover {
+    background: #f1f5f9;
+}
+
+/* Empty State */
+.empty-state-simple {
+    text-align: center;
+    padding: 3rem;
+    color: #94a3b8;
+}
+
+/* ============================
+   Swap Request Modal Styles
+   ============================ */
+
+/* Reusing some basic modal styles from style/ebooks but ensuring they work here */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-card {
+    background: #FFFBF5;
+    /* Warm white as per screenshot */
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay:not(.hidden) .modal-content-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.btn-close-modal {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.modal-body-padded {
+    padding: 1.5rem;
+}
+
+.requesting-text {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.highlight-text {
+    color: #475569;
+    font-weight: 500;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    /* Darker label */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid #cbd5e1;
+    /* Light grey border */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    /* transition: border-color 0.2s; */
+    color: #334155;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #64748b;
+}
+
+/* Modal Actions */
+.modal-actions-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.block-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-orange {
+    background: #E87A38;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background: #d66a2e;
+}
+
+.btn-navy {
+    background: #1e3a8a !important;
+    color: white !important;
+}
+
+.btn-navy:hover {
+    background: #172e70 !important;
+}
+
+.btn-secondary-outline {
+    background: white;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+}
+
+.btn-secondary-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ============================
+   Upload Book Feature Styles
+   ============================ */
+
+.upload-cta-bar {
+    background-color: #1e3a8a;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    /* Align button to the right */
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-upload-cta {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+}
+
+.btn-upload-cta:hover {
+    opacity: 0.9;
+}
+
+/* Modal subtitle */
+.modal-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
+}
+
+/* Ensure Select styling matches inputs */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #1e293b;
+    appearance: none;
+    background: white;
+    cursor: pointer;
+}
+
+.select-wrapper .select-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.form-hint {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 0.4rem;
+}
+
+/* ============================
+   Upload Book Modal Refinements
+   ============================ */
+
+.swap-upload-card {
+    background: #FFFBF5 !important;
+    /* Warm white from screenshot */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.swap-upload-card .modal-header {
+    border-bottom: none;
+    padding: 2rem 2rem 1rem;
+}
+
+.swap-upload-card .modal-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.swap-upload-card .modal-subtitle {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.swap-upload-card .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.swap-upload-card .form-group label {
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.swap-upload-card .form-group input,
+.swap-upload-card .form-group select {
+    border: 2px solid #cbd5e1;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+.swap-upload-card .form-group input:focus,
+.swap-upload-card .form-group select:focus {
+    border-color: #1e3a8a;
+    outline: none;
+}
+
+.swap-upload-card .modal-actions-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.btn-navy {
+    background: #1e3a8a !important;
+    /* Navy color from header in screenshot */
+    color: white !important;
+    border: none !important;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-navy:hover {
+    background: #172e70 !important;
+    transform: translateY(-2px);
+}
+
+.swap-upload-card .btn-secondary-outline {
+    background: white;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    border-radius: 10px;
+}

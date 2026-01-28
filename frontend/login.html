@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <!-- Background Elements -->
+        <div class="login-bg-left"></div>
+        <div class="login-bg-right"></div>
+
+        <div class="container login-container">
+            <!-- Left Side Info -->
+            <div class="login-info">
+                <a href="index.html" class="logo mb-4">
+                    <div class="logo-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <span style="color: white;">BookSphere</span>
+                </a>
+
+                <h1>Welcome to Your <br><span class="highlight-yellow">Reading Universe</span></h1>
+                <p class="login-subtext">Join thousands of book lovers in discovering, sharing, and exploring the
+                    transformative power of reading.</p>
+
+                <div class="info-features">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <span>Access to 500,000+ books</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-user-group"></i></div>
+                        <span>Join book communities</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-regular fa-star"></i></div>
+                        <span>Track reading progress</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <span>AI-powered recommendations</span>
+                    </div>
+                </div>
+
+                <div class="hero-stats mt-5" style="margin-top: 3rem;">
+                    <div class="stat-item">
+                        <span class="stat-number highlight-yellow">500K+</span>
+                        <span class="stat-label text-white-50">Books</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number highlight-yellow">50K+</span>
+                        <span class="stat-label text-white-50">Readers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number highlight-yellow">1M+</span>
+                        <span class="stat-label text-white-50">Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Forms -->
+            <div class="login-form-area">
+
+                <!-- Step 1: Role Selection -->
+                <div id="role-selection-card" class="form-card fadeIn">
+                    <div class="card-header text-center">
+                        <div class="header-icon-circle"><i class="fa-solid fa-book-open"></i></div>
+                        <h2>Welcome to BookSphere</h2>
+                        <p class="text-secondary">Select your role to continue</p>
+                    </div>
+
+                    <div class="role-grid">
+                        <div class="role-option" onclick="selectRole('Reader')">
+                            <div class="role-icon"><i class="fa-regular fa-user"></i></div>
+                            <h3>Reader</h3>
+                            <p>Access all reading features, join book clubs, participate in swaps.</p>
+                            <span class="role-meta"><i class="fa-regular fa-clock"></i> Most Popular</span>
+                        </div>
+                        <div class="role-option" onclick="selectRole('Author')">
+                            <div class="role-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
+                            <h3>Author</h3>
+                            <p>All reader features plus upload books, create funding campaigns.</p>
+                            <span class="role-meta"><i class="fa-regular fa-circle-check"></i> For Creators</span>
+                        </div>
+                        <div class="role-option" onclick="selectRole('Admin')">
+                            <div class="role-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3>Admin</h3>
+                            <p>Full system access with content moderation and user management.</p>
+                            <span class="role-meta"><i class="fa-solid fa-key"></i> Full Access</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Login Form -->
+                <div id="login-form-card" class="form-card hidden">
+                    <div class="card-header text-center">
+                        <h2>Welcome Back</h2>
+                        <p class="text-secondary">Sign in to continue your reading journey</p>
+
+                        <div class="selected-role-badge">
+                            <span class="current-role"><i class="fa-regular fa-user"></i> <span
+                                    id="display-role">Reader</span></span>
+                            <button onclick="showRoleSelection()" class="btn-change">Change</button>
+                        </div>
+                    </div>
+
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="email">Email or Username</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user input-icon"></i>
+                                <input type="text" id="email" placeholder="Enter your email or username" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <input type="password" id="password" placeholder="Enter your password" required>
+                                <i class="fa-regular fa-eye toggle-password"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-full btn-gradient">Sign In <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                    <button class="btn btn-full btn-outlined">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                            width="18">
+                        Continue with Google
+                    </button>
+
+                    <p class="signup-prompt">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

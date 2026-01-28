@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .role-body {
+            background: linear-gradient(135deg, #1e293b 0%, #1e3a8a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Split Background */
+        .role-split-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 0;
+        }
+
+        .bg-left {
+            width: 50%;
+            background: #1e293b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            color: white;
+        }
+
+        .bg-right {
+            width: 50%;
+            background: linear-gradient(135deg, #c26530 0%, #d97706 100%);
+        }
+
+        .role-content-wrapper {
+            z-index: 10;
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .left-panel {
+            flex: 1;
+            color: white;
+            padding-right: 2rem;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-highlight {
+            color: #fbbf24;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feat-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .feat-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .stat-item h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fbbf24;
+            margin: 0;
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Right Panel Cards */
+        .role-selection-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            width: 550px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .role-icon-main {
+            width: 64px;
+            height: 64px;
+            background: #1e293b;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .role-card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-card-subtitle {
+            color: #64748b;
+            margin-bottom: 2.5rem;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .role-option {
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .role-option:hover {
+            border-color: #f97316;
+            background: #fff7ed;
+            transform: translateY(-2px);
+        }
+
+        .role-option.active {
+            border-color: #f97316;
+            background: #fff7ed;
+            box-shadow: 0 0 0 1px #f97316;
+        }
+
+        .option-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+
+        .role-option:hover .option-icon {
+            background: white;
+            color: #f97316;
+        }
+
+        /* Specific accent structure for Author option to match image */
+        .role-option:nth-child(2) .option-icon {
+            background: #f97316;
+            color: white;
+        }
+
+        .role-option:nth-child(2) {
+            border-color: #f97316;
+            background: #fff7ed;
+        }
+
+
+        .option-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1e293b;
+        }
+
+        .option-desc {
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-tag {
+            font-size: 0.7rem;
+            color: #f97316;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    </style>
+</head>
+
+<body class="role-body">
+    <!-- Split Background visual only -->
+    <div class="role-split-bg">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+    </div>
+
+    <div class="role-content-wrapper">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="logo-row">
+                <div class="logo-icon"><i class="fa-solid fa-book-open"></i></div>
+                <div class="logo-text">BookSphere</div>
+            </div>
+
+            <h1 class="hero-title">Welcome to Your<br><span class="text-highlight">Reading Universe</span></h1>
+            <p class="hero-desc">Join thousands of book lovers in discovering, sharing, and exploring the transformative
+                power of reading.</p>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feat-icon"><i class="fa-solid fa-book"></i></div>
+                    <span class="feat-text">Access to 500,000+ books</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feat-icon"><i class="fa-solid fa-users"></i></div>
+                    <span class="feat-text">Join book communities</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feat-icon"><i class="fa-regular fa-star"></i></div>
+                    <span class="feat-text">Track reading progress</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <span class="feat-text">AI-powered recommendations</span>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <h4>500K+</h4>
+                    <span>Books</span>
+                </div>
+                <div class="stat-item">
+                    <h4>50K+</h4>
+                    <span>Readers</span>
+                </div>
+                <div class="stat-item">
+                    <h4>1M+</h4>
+                    <span>Reviews</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel (Card) -->
+        <div class="role-selection-card">
+            <div class="role-icon-main"><i class="fa-solid fa-book-open"></i></div>
+            <h2 class="role-card-title">Welcome to BookSphere</h2>
+            <p class="role-card-subtitle">Select your role to continue</p>
+
+            <div class="roles-grid">
+                <!-- Reader -->
+                <a href="signup.html?role=Reader" class="role-option">
+                    <div class="option-icon"><i class="fa-regular fa-user"></i></div>
+                    <span class="option-title">Reader</span>
+                    <span class="option-desc">Access all reading features, join book clubs, participate in swaps.</span>
+                    <span class="option-tag" style="color:#94a3b8"><i class="fa-regular fa-clock"></i> Most
+                        Popular</span>
+                </a>
+
+                <!-- Author -->
+                <a href="signup.html?role=Author" class="role-option">
+                    <div class="option-icon"><i class="fa-solid fa-book-journal-whills"></i></div>
+                    <span class="option-title">Author</span>
+                    <span class="option-desc">All reader features plus upload books, create funding campaigns.</span>
+                    <span class="option-tag"><i class="fa-solid fa-check-circle"></i> For Creators</span>
+                </a>
+
+                <!-- Admin -->
+                <a href="signup.html?role=Admin" class="role-option">
+                    <div class="option-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <span class="option-title">Admin</span>
+                    <span class="option-desc">Full system access with content moderation and user management.</span>
+                    <span class="option-tag" style="color:#94a3b8"><i class="fa-solid fa-key"></i> Full Access</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

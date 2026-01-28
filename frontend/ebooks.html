@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Books - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ebooks.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-tablet-screen-button"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>E-Books</h1>
+                        <p>Discover and download digital books</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </header>
+
+            <!-- Library Content -->
+            <div class="dashboard-scroll">
+
+                <!-- Hero Banner -->
+                <section class="dash-hero ebooks-hero">
+                    <div class="ebooks-hero-content">
+                        <h2>Free Digital Library</h2>
+                        <p>Read thousands of free ebooks online - no downloads needed</p>
+
+                        <div class="filter-row">
+                            <div class="search-chip"><i class="fa-solid fa-magnifying-glass"></i> Scan</div>
+
+                            <div class="chip-group" id="category-filters">
+                                <span class="chip active" data-category="all">All</span>
+                                <span class="chip" data-category="Technology">Technology</span>
+                                <span class="chip" data-category="Business">Business</span>
+                                <span class="chip" data-category="Programming">Programming</span>
+                                <span class="chip" data-category="Social Science">Social Science</span>
+                                <span class="chip" data-category="Psychology">Psychology</span>
+                                <span class="chip" data-category="Design">Design</span>
+                                <span class="chip" data-category="Finance">Finance</span>
+                                <span class="chip" data-category="Environmental">Environmental</span>
+                            </div>
+
+                            <div class="format-toggles" id="format-filters">
+                                <span class="chip active" data-format="all">All</span>
+                                <span class="chip" data-format="PDF">PDF</span>
+                                <span class="chip" data-format="EPUB">EPUB</span>
+                                <span class="chip" data-format="MOBI">MOBI</span>
+                            </div>
+
+                            <!-- Upload Book Button for Authors -->
+                            <button class="btn btn-sm btn-white btn-upload-trigger hidden" id="upload-book-btn">
+                                <i class="fa-solid fa-upload"></i> Upload Book
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ebooks-hero-stat">
+                        <span class="big-stat" id="total-books-count">4</span>
+                        <span class="label-stat">Available Books</span>
+                    </div>
+                </section>
+
+                <div class="sub-nav-bar">
+                    <div class="sn-left">
+                        <span class="sn-link"><i class="fa-solid fa-fire"></i> 8 Popular</span>
+                        <span class="sn-link highlight"><i class="fa-solid fa-bolt"></i> 12 Free</span>
+                        <span class="sn-link"><i class="fa-regular fa-calendar-plus"></i> 7 New Releases</span>
+                    </div>
+                    <div class="sn-right" id="books-showing-count">
+                        Showing 4 of 4 books
+                    </div>
+                </div>
+
+                <!-- Book Grid -->
+                <section class="ebooks-grid-section">
+                    <div class="books-grid" id="ebooks-grid">
+
+                        <!-- Book Card 1 -->
+                        <div class="book-card" data-category="Technology" data-format="EPUB">
+                            <div class="book-cover-wrapper">
+                                <span class="badge-overlay green">Free</span>
+                                <span class="badge-overlay orange">Popular</span>
+                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000"
+                                    alt="Book Cover" class="book-cover">
+                                <span class="format-badge">EPUB</span>
+                            </div>
+                            <div class="book-info">
+                                <h3>The Digital Renaissance</h3>
+                                <p class="author">Sarah Chen</p>
+                                <div class="rating-row">
+                                    <i class="fa-solid fa-star text-orange"></i> 4.8 <span class="review-count">(1,234
+                                        reviews)</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span><i class="fa-regular fa-clock"></i> 3h 20m</span>
+                                    <span>600 pages</span>
+                                    <span>2.1 MB</span>
+                                </div>
+                                <p class="book-desc">An exploration of how digital transformation is reshaping our
+                                    world.</p>
+
+                                <div class="ai-summary">
+                                    <div class="ai-header"><i class="fa-solid fa-robot"></i> AI Summary</div>
+                                    <p>This book examines the profound impact of digital technologies on society...</p>
+                                </div>
+
+                                <div class="price-row">Free</div>
+
+                                <div class="action-buttons">
+                                    <a href="read-book.html" class="btn-action solid"><i
+                                            class="fa-solid fa-book-open"></i> Read
+                                        Online</a>
+                                </div>
+                                <div class="secondary-actions">
+                                    <button class="btn-link btn-add-library"
+                                        data-book-info='{"id": "book1", "title": "The Digital Renaissance", "author": "Sarah Chen", "cover": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000", "format": "EPUB"}'><i
+                                            class="fa-solid fa-folder-plus"></i> Add to My Library</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 2 -->
+                        <div class="book-card" data-category="Business" data-format="PDF">
+                            <div class="book-cover-wrapper">
+                                <span class="badge-overlay green">Free</span>
+                                <span class="badge-overlay blue">New</span>
+                                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1000"
+                                    alt="Book Cover" class="book-cover">
+                                <span class="format-badge">PDF</span>
+                            </div>
+                            <div class="book-info">
+                                <h3>Mindful Leadership</h3>
+                                <p class="author">David Kumar</p>
+                                <div class="rating-row">
+                                    <i class="fa-solid fa-star text-orange"></i> 4.6 <span class="review-count">(892
+                                        reviews)</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span><i class="fa-regular fa-clock"></i> 5h 15m</span>
+                                    <span>320 pages</span>
+                                    <span>3.4 MB</span>
+                                </div>
+                                <p class="book-desc">A comprehensive guide to leading with consciousness and purpose.
+                                </p>
+
+                                <div class="ai-summary">
+                                    <div class="ai-header"><i class="fa-solid fa-robot"></i> AI Summary</div>
+                                    <p>Kumar presents a revolutionary approach to leadership that combines...</p>
+                                </div>
+
+                                <div class="price-row">Free</div>
+
+                                <div class="action-buttons">
+                                    <a href="read-book.html" class="btn-action solid"><i
+                                            class="fa-solid fa-book-open"></i> Read
+                                        Online</a>
+                                </div>
+                                <div class="secondary-actions">
+                                    <button class="btn-link btn-add-library"
+                                        data-book-info='{"id": "book2", "title": "Mindful Leadership", "author": "David Kumar", "cover": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1000", "format": "PDF"}'><i
+                                            class="fa-solid fa-folder-plus"></i> Add to My Library</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 3 -->
+                        <div class="book-card" data-category="Programming" data-format="EPUB">
+                            <div class="book-cover-wrapper">
+                                <span class="badge-overlay green">Free</span>
+                                <span class="badge-overlay orange">Popular</span>
+                                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80&w=1000"
+                                    alt="Book Cover" class="book-cover">
+                                <span class="format-badge">EPUB</span>
+                            </div>
+                            <div class="book-info">
+                                <h3>The Art of Coding</h3>
+                                <p class="author">Emily Rodriguez</p>
+                                <div class="rating-row">
+                                    <i class="fa-solid fa-star text-orange"></i> 4.9 <span class="review-count">(2,156
+                                        reviews)</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span><i class="fa-regular fa-clock"></i> 7h 30m</span>
+                                    <span>450 pages</span>
+                                    <span>4.8 MB</span>
+                                </div>
+                                <p class="book-desc">Master the craft of programming with elegant and efficient code.
+                                </p>
+
+                                <div class="ai-summary">
+                                    <div class="ai-header"><i class="fa-solid fa-robot"></i> AI Summary</div>
+                                    <p>Rodriguez transforms programming from a technical skill into an art form. This...
+                                    </p>
+                                </div>
+
+                                <div class="price-row">Free</div>
+
+                                <div class="action-buttons">
+                                    <a href="read-book.html" class="btn-action solid"><i
+                                            class="fa-solid fa-book-open"></i> Read
+                                        Online</a>
+                                </div>
+                                <div class="secondary-actions">
+                                    <button class="btn-link btn-add-library"
+                                        data-book-info='{"id": "book3", "title": "The Art of Coding", "author": "Emily Rodriguez", "cover": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80&w=1000", "format": "EPUB"}'><i
+                                            class="fa-solid fa-folder-plus"></i> Add to My Library</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book Card 4 -->
+                        <div class="book-card" data-category="Social Science" data-format="MOBI">
+                            <div class="book-cover-wrapper">
+                                <span class="badge-overlay green">Free</span>
+                                <span class="badge-overlay blue">New</span>
+                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000"
+                                    alt="Book Cover" class="book-cover">
+                                <span class="format-badge">MOBI</span>
+                            </div>
+                            <div class="book-info">
+                                <h3>Future Society</h3>
+                                <p class="author">Dr. Maria Santos</p>
+                                <div class="rating-row">
+                                    <i class="fa-solid fa-star text-orange"></i> 4.4 <span class="review-count">(567
+                                        reviews)</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span><i class="fa-regular fa-clock"></i> 6h 10m</span>
+                                    <span>280 pages</span>
+                                    <span>2.9 MB</span>
+                                </div>
+                                <p class="book-desc">Understanding the societal changes in our interconnected world.</p>
+
+                                <div class="ai-summary">
+                                    <div class="ai-header"><i class="fa-solid fa-robot"></i> AI Summary</div>
+                                    <p>Dr. Santos analyzes emerging social trends and their implications for future...
+                                    </p>
+                                </div>
+
+                                <div class="price-row">Free</div>
+
+                                <div class="action-buttons">
+                                    <a href="read-book.html" class="btn-action solid"><i
+                                            class="fa-solid fa-book-open"></i> Read
+                                        Online</a>
+                                </div>
+                                <div class="secondary-actions">
+                                    <button class="btn-link btn-add-library"
+                                        data-book-info='{"id": "book4", "title": "Future Society", "author": "Dr. Maria Santos", "cover": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000", "format": "MOBI"}'><i
+                                            class="fa-solid fa-folder-plus"></i> Add to My Library</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Book Preview Modal -->
+    <div id="preview-modal" class="modal-overlay hidden">
+        <div class="modal-content-card">
+            <div class="modal-header">
+                <h2>Book Preview</h2>
+                <button class="btn-close-modal" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="modal-body-scroll">
+
+                <!-- Left Column -->
+                <div class="modal-left-col">
+                    <div class="modal-book-cover-wrapper">
+                        <div class="modal-badges">
+                            <span class="modal-badge green">Free</span>
+                            <span class="modal-badge orange">Popular</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000"
+                            alt="The Digital Renaissance">
+                        <span class="format-pill">EPUB</span>
+                    </div>
+
+                    <div class="modal-stats-grid">
+                        <div class="stat-row">
+                            <span class="stat-label">Pages</span>
+                            <span class="stat-value">280</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">File Size</span>
+                            <span class="stat-value">2.1 MB</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Read Time</span>
+                            <span class="stat-value">4h 20m</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Genre</span>
+                            <span class="stat-value">Technology</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Narrator</span>
+                            <span class="stat-value">Michael Johnson</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Audio Duration</span>
+                            <span class="stat-value">4h 35m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="modal-right-col">
+                    <div class="modal-title">
+                        <h1>The Digital Renaissance</h1>
+                        <span class="modal-author">Sarah Chen</span>
+                        <div class="modal-rating">
+                            <i class="fa-solid fa-star text-orange"></i> <strong>4.8</strong> (1,234 reviews)
+                        </div>
+                    </div>
+
+                    <div class="modal-description">
+                        <span class="modal-desc-label">Description</span>
+                        <p>An exploration of how digital transformation is reshaping our world. From blockchain to AI,
+                            this comprehensive guide navigates the complexities of our modern technological landscape.
+                        </p>
+                    </div>
+
+                    <div class="modal-ai-summary">
+                        <div class="ai-header"><i class="fa-solid fa-robot"></i> AI-Generated Summary</div>
+                        <p>This book examines the profound impact of digital technologies on society, economy, and
+                            culture. Chen explores how AI, blockchain, and IoT are creating a new renaissance period
+                            where human creativity merges with technological capabilities.</p>
+                    </div>
+
+                    <div class="key-insights">
+                        <h4>Key Insights</h4>
+                        <ul>
+                            <li>Digital transformation is fundamentally changing human behavior</li>
+                            <li>The intersection of technology and creativity drives innovation</li>
+                            <li>Future success requires adapting to rapid technological change</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-actions">
+                        <a href="read-book.html" class="btn-modal-primary"><i class="fa-solid fa-book-open"></i> Read
+                            Online</a>
+                        <button class="btn-modal-secondary btn-audiobook"
+                            data-book-info='{"id": "book1", "title": "The Digital Renaissance", "author": "Sarah Chen", "cover": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000"}'><i
+                                class="fa-solid fa-headphones"></i> Play
+                            Audiobook</button>
+                        <button class="btn-modal-secondary btn-add-library"
+                            data-book-info='{"id": "book1", "title": "The Digital Renaissance", "author": "Sarah Chen", "cover": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000", "format": "EPUB"}'><i
+                                class="fa-solid fa-download"></i> Add to Library</button>
+                        <button class="btn-modal-secondary"><i class="fa-regular fa-eye"></i> Sample Pages</button>
+                    </div>
+
+                    <!-- Audio Player Bar -->
+                    <div id="audio-player-bar" class="audio-player-bar hidden">
+                        <div class="player-content">
+                            <!-- Left: Info -->
+                            <div class="player-info">
+                                <img src="" alt="Cover" class="player-cover" id="player-cover">
+                                <div class="player-text">
+                                    <h4 id="player-title">Book Title</h4>
+                                    <p id="player-author">Author Name</p>
+                                </div>
+                            </div>
+
+                            <!-- Center: Controls -->
+                            <div class="player-controls-wrapper">
+                                <div class="player-controls">
+                                    <button class="ctrl-btn sm"><i class="fa-solid fa-backward-step"></i></button>
+                                    <button class="ctrl-btn lg" id="play-pause-btn"><i
+                                            class="fa-solid fa-play"></i></button>
+                                    <button class="ctrl-btn sm"><i class="fa-solid fa-forward-step"></i></button>
+                                </div>
+                                <div class="player-progress">
+                                    <span class="time-current">0:00</span>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="time-total">4:35:00</span>
+                                </div>
+                            </div>
+
+                            <!-- Right: Volume & Close -->
+                            <div class="player-extras">
+                                <div class="volume-ctrl">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <div class="volume-slider">
+                                        <div class="volume-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <button class="btn-close-player" id="close-player-btn"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Book Modal -->
+    <div id="upload-modal" class="modal-overlay hidden">
+        <div class="modal-content-card upload-modal-card">
+            <div class="modal-header">
+                <div class="header-titles">
+                    <h2>Upload New Book</h2>
+                    <p class="subtitle">Upload a new book to the library. It will be reviewed by an admin before being
+                        published.</p>
+                </div>
+                <button class="btn-close-modal" id="close-upload-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="upload-book-form" class="modal-form">
+                <div class="modal-form-body">
+                    <div class="form-group">
+                        <label for="upload-title">Book Title *</label>
+                        <input type="text" id="upload-title" placeholder="Enter book title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-author">Author *</label>
+                        <input type="text" id="upload-author" placeholder="Enter author name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="upload-genre">Genre *</label>
+                            <select id="upload-genre" required>
+                                <option value="Technology">Technology</option>
+                                <option value="Business">Business</option>
+                                <option value="Programming">Programming</option>
+                                <option value="Social Science">Social Science</option>
+                                <option value="Psychology">Psychology</option>
+                                <option value="Design">Design</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Environmental">Environmental</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="upload-format">Format *</label>
+                            <select id="upload-format" required>
+                                <option value="PDF">PDF</option>
+                                <option value="EPUB">EPUB</option>
+                                <option value="MOBI">MOBI</option>
+                                <option value="Hardcover">Hardcover</option>
+                                <option value="Audiobook">Audiobook</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-pages">Number of Pages</label>
+                        <input type="number" id="upload-pages" placeholder="e.g., 250">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-description">Description *</label>
+                        <textarea id="upload-description" rows="4" placeholder="Enter book description"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-cover">Cover Image URL (Optional)</label>
+                        <input type="url" id="upload-cover" placeholder="https://example.com/cover.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-file">PDF Book File *</label>
+                        <input type="file" id="upload-file" accept=".pdf" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-secondary" id="cancel-upload">Cancel</button>
+                    <button type="submit" class="btn-modal-primary"><i class="fa-solid fa-upload"></i> Upload
+                        Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        // Additional inline script if needed to attach event listener for closing via X button specifically here, 
+        // though generic script.js might handle it.
+        // Let's rely on script.js for the main logic, but ensure the close button works
+        document.querySelector('.btn-close-modal').addEventListener('click', closePreviewModal);
+    </script>
+</body>
+
+</html>

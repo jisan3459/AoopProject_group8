@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Dashboard - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fund.css">
+    <link rel="stylesheet" href="css/community.css">
+    <style>
+        /* Author Dashboard Specific Styles */
+        .author-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #E87A38 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .author-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 60%;
+        }
+
+        .ah-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .ah-label i {
+            color: #fbbf24;
+        }
+
+        .author-hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .author-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .ah-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-white-solid {
+            background: white;
+            color: #1e293b;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-white-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: #f8fafc;
+        }
+
+        .author-card-hero {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ach-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .ach-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .ach-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Grid */
+        .stats-large-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card-large {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .stat-card-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .scl-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .scl-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .scl-content p {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .section-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header-flex h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .btn-view-all {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-view-all:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li class="active">
+                        <a href="dashboard-author.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Writing Goal</span>
+                    </div>
+                    <p class="goal-progress-text">3 of 5 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 60%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>60% complete</span>
+                        <span>2 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>Author Dashboard</h1>
+                        <p>Manage your creative projects and audience</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, campaigns, or readers...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white" id="create-campaign-btn">
+                        <i class="fa-solid fa-plus"></i> New Campaign
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- 1. Author Hero Section -->
+                <section class="author-hero">
+                    <div class="author-hero-content">
+                        <div class="ah-label"><i class="fa-solid fa-pen-nib"></i> Publish your masterpiece today
+                        </div>
+                        <h2>Connect with your Audience</h2>
+                        <p>Track your campaign progress, manage your books, and engage with your backers and readers.
+                        </p>
+                        <div class="ah-actions">
+                            <a href="#" class="btn-white-solid"><i class="fa-solid fa-plus"></i> Launch Campaign</a>
+                            <button class="btn-white-solid" id="upload-book-btn"><i class="fa-solid fa-upload"></i>
+                                Upload E-Book</button>
+                        </div>
+                    </div>
+
+                    <div class="author-card-hero">
+                        <div class="ach-icon" style="color: #fbbf24;"><i class="fa-solid fa-rocket"></i></div>
+                        <h4 class="ach-title">Active Campaigns</h4>
+                        <p class="ach-subtitle" id="hero-campaign-status">You have 0 active campaigns</p>
+                        <button class="btn-white-solid"
+                            style="width: 100%; justify-content: center; margin-top: 0.5rem;"
+                            id="manage-campaigns-btn">View All Campaigns</button>
+                    </div>
+                </section>
+
+                <!-- 2. Author Statistics -->
+                <section class="dashboard-section">
+                    <div class="section-header-flex">
+                        <h3>Publishing Insights</h3>
+                        <a href="profile.html" class="btn-view-all"><i class="fa-regular fa-eye"></i> View Analytics</a>
+                    </div>
+                    <div class="stats-large-grid">
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #E87A38;"><i class="fa-solid fa-book"></i>
+                            </div>
+                            <div class="scl-content">
+                                <h3 id="books-published-count">0</h3>
+                                <p>Books Published</p>
+                            </div>
+                        </div>
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #10b981;"><i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <div class="scl-content">
+                                <h3 id="total-funds-raised">$0</h3>
+                                <p>Funds Raised</p>
+                            </div>
+                        </div>
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #f59e0b;"><i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="scl-content">
+                                <h3 id="total-followers">0</h3>
+                                <p>Total Readers</p>
+                            </div>
+                        </div>
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #ec4899;"><i class="fa-solid fa-award"></i></div>
+                            <div class="scl-content">
+                                <h3>4.8</h3>
+                                <p>Avg. Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. My Campaigns (Mirror reader's events layout) -->
+                <section class="dashboard-section">
+                    <div class="section-header-flex">
+                        <h3>My Active Projects</h3>
+                        <a href="fund-authors.html" class="btn-view-all"><i class="fa-solid fa-shuttle-space"></i>
+                            Manage Projects</a>
+                    </div>
+                    <div id="author-campaigns-list" class="events-horizontal-list">
+                        <div class="empty-state-text">No active campaigns at the moment.</div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Campaign Modal (Keeping it here for functionality) -->
+    <div id="create-campaign-modal" class="modal-overlay hidden">
+        <div class="modal-content-card funding-modal">
+            <div class="modal-header">
+                <h3>Create Campaign</h3>
+                <button class="icon-btn" id="close-campaign-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="campaign-form">
+                <div class="form-group">
+                    <label for="book-title">Book Title *</label>
+                    <input type="text" id="book-title" class="form-input" placeholder="Enter book title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author-name">Author Name *</label>
+                    <input type="text" id="author-name" class="form-input" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">Genre *</label>
+                    <select id="genre" class="form-input" required>
+                        <option value="">Select genre</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Biography">Biography</option>
+                        <option value="History">History</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Self-Help">Self-Help</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" class="form-input" rows="4" placeholder="Describe your book project"
+                        required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="funding-goal">Funding Goal ($) *</label>
+                        <input type="number" id="funding-goal" class="form-input" placeholder="5000" min="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campaign-duration">Campaign Duration (Days) *</label>
+                        <input type="number" id="campaign-duration" class="form-input" placeholder="30" min="1" max="90"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="author-photo">Author Photo URL (Optional)</label>
+                    <input type="url" id="author-photo" class="form-input" placeholder="https://example.com/photo.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label for="book-cover">Book Cover URL (Optional)</label>
+                    <input type="url" id="book-cover" class="form-input" placeholder="https://example.com/cover.jpg">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary-modal" id="cancel-campaign-btn">Cancel</button>
+                    <button type="submit" class="btn-primary-modal">
+                        <i class="fa-solid fa-rocket"></i> Launch Campaign
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Upload Book Modal -->
+    <div id="upload-modal" class="modal-overlay hidden">
+        <div class="modal-content-card upload-modal-card">
+            <div class="modal-header">
+                <div class="header-titles">
+                    <h2>Upload New Book</h2>
+                    <p class="subtitle">Upload a new book to the library. It will be reviewed by an admin before being
+                        published.</p>
+                </div>
+                <button class="btn-close-modal" id="close-upload-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="upload-book-form" class="modal-form">
+                <div class="modal-form-body">
+                    <div class="form-group">
+                        <label for="upload-title">Book Title *</label>
+                        <input type="text" id="upload-title" placeholder="Enter book title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-author">Author *</label>
+                        <input type="text" id="upload-author" placeholder="Enter author name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="upload-genre">Genre *</label>
+                            <select id="upload-genre" required>
+                                <option value="Technology">Technology</option>
+                                <option value="Business">Business</option>
+                                <option value="Programming">Programming</option>
+                                <option value="Social Science">Social Science</option>
+                                <option value="Psychology">Psychology</option>
+                                <option value="Design">Design</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Environmental">Environmental</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="upload-format">Format *</label>
+                            <select id="upload-format" required>
+                                <option value="PDF">PDF</option>
+                                <option value="EPUB">EPUB</option>
+                                <option value="MOBI">MOBI</option>
+                                <option value="Hardcover">Hardcover</option>
+                                <option value="Audiobook">Audiobook</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-pages">Number of Pages</label>
+                        <input type="number" id="upload-pages" placeholder="e.g., 250">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-description">Description *</label>
+                        <textarea id="upload-description" rows="4" placeholder="Enter book description"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-cover">Cover Image URL (Optional)</label>
+                        <input type="url" id="upload-cover" placeholder="https://example.com/cover.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upload-file">PDF Book File *</label>
+                        <input type="file" id="upload-file" accept=".pdf" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-secondary" id="cancel-upload">Cancel</button>
+                    <button type="submit" class="btn-modal-primary"><i class="fa-solid fa-upload"></i> Upload
+                        Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Specific Dashboard logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Link the hero buttons to the modal
+            const launchBtns = document.querySelectorAll('.ah-actions a:first-child, #create-campaign-btn');
+            const modal = document.getElementById('create-campaign-modal');
+
+            launchBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            const closeBtn = document.getElementById('close-campaign-modal');
+            const cancelBtn = document.getElementById('cancel-campaign-btn');
+
+            [closeBtn, cancelBtn].forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        modal.classList.add('hidden');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

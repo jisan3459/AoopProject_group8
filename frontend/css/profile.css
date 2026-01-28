@@ -1,0 +1,839 @@
+/* ============================
+   Profile Page Styles
+   ============================ */
+
+/* Hero Section */
+.profile-hero {
+    background: linear-gradient(100deg, #1e3a8a 0%, #c2410c 100%);
+    /* Approximation of the gradient: Dark Blue Left -> Orange Right */
+    background: linear-gradient(90deg, #1e293b 0%, #334155 30%, #cd5c08 100%);
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.profile-main-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-avatar-lg {
+    width: 80px;
+    height: 80px;
+    background: white;
+    color: #1e293b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-text-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    line-height: 1.1;
+}
+
+.join-date {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 0.8rem;
+}
+
+.profile-badges {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.p-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-settings-light {
+    background: white;
+    color: #1e293b;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+}
+
+.btn-settings-light:hover {
+    background: #f1f5f9;
+}
+
+/* Points Card */
+.points-card {
+    background: rgba(80, 70, 70, 0.4);
+    /* Darker semi-transparent background */
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    /* Center horizontally relative to parent flex or absolute */
+    width: 100%;
+}
+
+/* In the design, points card is centered or closer to left. Let's align it with content */
+.profile-hero .points-card {
+    margin: 0;
+    align-self: flex-start;
+    margin-left: 96px;
+    /* Align roughly with text, avatar width + gap */
+}
+
+.pc-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pc-icon {
+    width: 40px;
+    height: 40px;
+    background: #FCC609;
+    /* Coin yellow */
+    color: #92400E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.pc-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.pc-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.unit {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.pc-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 0.5rem;
+}
+
+.pc-promo {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fbbf24;
+}
+
+.btn-redeem {
+    background: white;
+    color: #1e293b;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* very subtle shadow */
+}
+
+.sb-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.sb-icon.orange {
+    color: #E87A38;
+}
+
+.sb-icon.red {
+    color: #ef4444;
+}
+
+.sb-icon.yellow {
+    color: #d97706;
+}
+
+.sb-icon.purple {
+    color: #9333ea;
+}
+
+.sb-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.2rem;
+}
+
+.sb-label {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.achievement-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.ac-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* Default gradient text effect or color */
+    background: -webkit-linear-gradient(#fca5a5, #ef4444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Since we need exact colors, let's use colors directly for simplicity */
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: #ef4444;
+    /* Default red */
+}
+
+.ac-icon.blue {
+    color: #3b82f6;
+}
+
+.ac-icon.orange {
+    color: #f97316;
+}
+
+.ac-icon.yellow {
+    color: #eab308;
+}
+
+.ac-icon.green {
+    color: #22c55e;
+}
+
+
+.achievement-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-card p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.ac-status.locked {
+    color: #E87A38;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-hero .points-card {
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+
+    .profile-header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-settings-light {
+        align-self: flex-start;
+    }
+}
+
+/* Additional Profile Section Styles */
+.profile-section {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.empty-state-card {
+    background: white;
+    border: 2px dashed #e2e8f0;
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #64748b;
+}
+
+.empty-icon-circle {
+    width: 80px;
+    height: 80px;
+    background: #f1f5f9;
+    color: #94a3b8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+}
+
+.empty-state-card h3 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+/* Activity/Contribution List */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.activity-item:hover {
+    transform: translateX(5px);
+    border-color: #e2e8f0;
+}
+
+.activity-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.activity-icon.crowdfund {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.activity-details {
+    flex: 1;
+}
+
+.activity-details h4 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 0.2rem;
+}
+
+.activity-meta {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.activity-amount {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+/* Reminders */
+.settings-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #f1f5f9;
+}
+
+.reminder-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.reminder-item-row:last-of-type {
+    border-bottom: none;
+}
+
+.reminder-info h4 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 0.2rem;
+}
+
+.reminder-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.reminder-time-selector {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.time-input {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+    color: #1e293b;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #1e293b;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+/* Points Section */
+.points-hero-card {
+    background: var(--primary-orange);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 25px -5px rgba(232, 122, 56, 0.4);
+}
+
+.phc-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.phc-value {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.phc-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.points-hero-card p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.earn-points-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.earn-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.earn-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.earn-icon.blue {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.earn-icon.purple {
+    background: #faf5ff;
+    color: #a855f7;
+}
+
+.earn-icon.orange {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.earn-icon.green {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.earn-info {
+    flex: 1;
+}
+
+.earn-info h4 {
+    font-size: 1.05rem;
+    color: #1e293b;
+    margin-bottom: 0.1rem;
+}
+
+.earn-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.earn-value {
+    font-weight: 700;
+    color: #E87A38;
+    background: #fff7ed;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Redeem Modal Styles */
+.redeem-modal {
+    max-width: 850px;
+    width: 90%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.redeem-points-balance {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 1.5rem 2rem;
+    color: white;
+    margin: 0 -2rem 1.5rem -2rem;
+}
+
+.balance-info .label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.balance-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.balance-value .unit {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.modal-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+.m-tab {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.m-tab.active {
+    color: #E87A38;
+}
+
+.m-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #E87A38;
+    border-radius: 3px;
+}
+
+.rewards-scroll {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 0.5rem;
+    margin-right: -0.5rem;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+    padding: 0.5rem 0;
+}
+
+.reward-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.reward-card:hover {
+    transform: translateY(-5px);
+    border-color: #E87A38;
+    box-shadow: 0 10px 20px -5px rgba(232, 122, 56, 0.15);
+}
+
+.reward-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Category Colors */
+.reward-card[data-category="DISCOUNT"] .reward-icon-box {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.reward-card[data-category="FREE_BOOK"] .reward-icon-box {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.reward-card[data-category="PREMIUM"] .reward-icon-box {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.reward-card[data-category="EXCLUSIVE"] .reward-icon-box {
+    background: #faf5ff;
+    color: #9333ea;
+}
+
+.reward-info h4 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.reward-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+    min-height: 2.8rem;
+}
+
+.reward-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f8fafc;
+}
+
+.reward-cost {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.reward-cost span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.btn-redeem-action {
+    background: #E87A38;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-redeem-action:hover {
+    background: #d16b2e;
+    transform: scale(1.05);
+}
+
+.btn-redeem-action:disabled {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #94a3b8;
+}
+
+.loading-spinner i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .redeem-modal {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+    }
+
+    .rewards-grid {
+        grid-template-columns: 1fr;
+    }
+}

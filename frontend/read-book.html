@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Renaissance - BookSphere Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/reader.css">
+</head>
+
+<body>
+
+    <!-- Reader Header -->
+    <header class="reader-header">
+        <div class="header-left">
+            <a href="ebooks.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> BookSphere
+            </a>
+        </div>
+        <div class="header-center">
+            <span class="book-title" id="book-title-header">Loading Book...</span>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="icon-btn" title="Bookmarks"><i class="fa-regular fa-bookmark"></i></button>
+            <button class="icon-btn" title="Formatting"><i class="fa-solid fa-bars"></i></button>
+            <div class="font-controls">
+                <button class="icon-btn text-icon">-</button>
+                <span class="font-size-val">18</span>
+                <button class="icon-btn text-icon">+</button>
+            </div>
+            <button class="icon-btn" title="Theme"><i class="fa-solid fa-rotate-right"></i></button>
+            <a id="external-open" href="#" target="_blank" class="btn btn-sm btn-white hidden"
+                title="Open PDF in new tab">
+                <i class="fa-solid fa-up-right-from-square"></i> Open in New Tab
+            </a>
+        </div>
+    </header>
+
+    <!-- Reading Content -->
+    <main class="reader-content" id="reader-container">
+        <!-- Loading State -->
+        <div id="reader-loading"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; gap: 1rem; color: #64748b;">
+            <i class="fa-solid fa-spinner fa-spin fa-3x"></i>
+            <p>Fetching book content from database...</p>
+        </div>
+
+        <article class="chapter-content hidden" id="book-content">
+            <div id="pdf-viewer-wrapper" class="hidden" style="width: 100%; height: 85vh;">
+                <iframe id="pdf-frame" src="" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+
+            <div id="static-content" class="hidden">
+                <h1 class="chapter-title" id="display-chapter-title">Chapter Title</h1>
+                <div id="text-body">
+                    <!-- Dynamic Text Content -->
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Reader Footer -->
+    <footer class="reader-footer">
+        <div class="footer-left">
+            <button class="nav-btn disabled"><i class="fa-solid fa-chevron-left"></i> Previous Chapter</button>
+        </div>
+        <div class="footer-center">
+            <span id="page-indicator">Chapter 1 of 3</span>
+        </div>
+        <div class="footer-right">
+            <button class="nav-btn">Next Chapter <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookId = urlParams.get('id');
+            const loadingIndicator = document.getElementById('reader-loading');
+            const contentArea = document.getElementById('book-content');
+
+            console.log("Reader initialized for book ID:", bookId);
+            console.log("API Base URL used:", API_BASE_URL);
+
+            if (bookId) {
+                try {
+                    // Add a timeout to the fetch call
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+
+                    const response = await fetch(`${API_BASE_URL}/api/books/${bookId}`, { signal: controller.signal });
+                    clearTimeout(timeoutId);
+
+                    if (response.ok) {
+                        const book = await response.json();
+                        console.log("Book metadata loaded:", book.title);
+
+                        // Hide loading, show content
+                        if (loadingIndicator) loadingIndicator.classList.add('hidden');
+                        if (contentArea) contentArea.classList.remove('hidden');
+
+                        // Update UI
+                        document.title = `${book.title} - BookSphere Reader`;
+                        document.querySelectorAll('.book-title').forEach(el => el.textContent = book.title);
+                        if (document.getElementById('display-chapter-title')) {
+                            document.getElementById('display-chapter-title').textContent = book.title;
+                        }
+
+                        // If it's a real book from DB, we try to load the PDF
+                        if (book.pdfFileName) {
+                            console.log("PDF detected, starting load:", book.pdfFileName);
+                            const readerContainer = document.getElementById('reader-container');
+                            if (readerContainer) readerContainer.classList.add('pdf-mode');
+
+                            document.getElementById('static-content').classList.add('hidden');
+                            const pdfWrapper = document.getElementById('pdf-viewer-wrapper');
+
+                            pdfWrapper.classList.remove('hidden');
+                            pdfWrapper.style.height = '100%';
+
+                            // Use the direct PDF endpoint with FitH view parameter
+                            const pdfUrl = `${API_BASE_URL}/api/books/${bookId}/pdf#view=FitH`;
+
+                            // Set external open link
+                            const externalBtn = document.getElementById('external-open');
+                            if (externalBtn) {
+                                externalBtn.href = pdfUrl;
+                                externalBtn.classList.remove('hidden');
+                            }
+
+                            // Use a single, high-compatibility iframe
+                            pdfWrapper.innerHTML = `
+                                <iframe src="${pdfUrl}" width="100%" height="100%" style="border: none; display: block; min-height: 100%; border-radius: 0;">
+                                </iframe>
+                            `;
+
+                            document.getElementById('page-indicator').textContent = "PDF Viewer Mode";
+                        } else {
+                            console.log("No PDF associated with this entry.");
+                            document.getElementById('static-content').classList.remove('hidden');
+                            document.getElementById('text-body').innerHTML = `
+                                <div class="empty-state" style="text-align: center; padding: 3rem;">
+                                    <i class="fa-solid fa-file-lines fa-4x" style="color: #cbd5e1; margin-bottom: 1rem;"></i>
+                                    <h3>No PDF Content Available</h3>
+                                    <p style="color: #64748b; max-width: 500px; margin: 1rem auto;">${book.description}</p>
+                                    <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 2rem;">(This book entry only contains metadata. Full text is not available in PDF format.)</p>
+                                </div>
+                            `;
+                            document.getElementById('page-indicator').textContent = "Preview Mode";
+                        }
+                    } else {
+                        throw new Error(`Failed to fetch book metadata. Status: ${response.status}`);
+                    }
+                } catch (err) {
+                    console.error('Error loading book:', err);
+                    if (loadingIndicator) {
+                        const errorMessage = err.name === 'AbortError' ? 'Connection timed out. Is the backend server running?' : err.message;
+                        loadingIndicator.innerHTML = `
+                            <div style="text-align: center; padding: 2rem;">
+                                <i class="fa-solid fa-circle-exclamation fa-3x" style="color: #ef4444; margin-bottom: 1rem;"></i>
+                                <h3 style="color: #ef4444;">Unable to Load Book</h3>
+                                <p style="color: #64748b; margin-bottom: 1.5rem;">${errorMessage}</p>
+                                <button class="btn btn-sm btn-white" onclick="location.reload()" style="padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Try Again</button>
+                                <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 2rem;">Endpoint: ${API_BASE_URL}/api/books/${bookId}</p>
+                            </div>
+                        `;
+                    }
+                }
+            } else {
+                if (loadingIndicator) {
+                    loadingIndicator.innerHTML = `
+                        <i class="fa-solid fa-triangle-exclamation fa-3x" style="color: #f59e0b;"></i>
+                        <p>No book selected to read.</p>
+                        <a href="ebooks.html" class="btn btn-sm btn-white" style="margin-top:1rem;">Back to Library</a>
+                    `;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

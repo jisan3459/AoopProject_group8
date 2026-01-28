@@ -1,0 +1,150 @@
+/* ============================
+   Support Page Styles
+   ============================ */
+
+.support-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.support-hero h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.support-search-big {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.support-search-big input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.support-search-big input:focus {
+    outline: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.support-search-big i {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.2rem;
+}
+
+/* Grid Layout */
+.support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* FAQ */
+.faq-item {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.faq-question {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-answer {
+    padding: 1.2rem 1.5rem;
+    padding-top: 0;
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    border-top: 1px solid transparent;
+}
+
+/* Contact Card */
+.contact-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-card .section-title {
+    margin-bottom: 1rem;
+    border-bottom: none;
+}
+
+.contact-info-card {
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.ci-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.ci-row:last-child {
+    margin-bottom: 0;
+}
+
+.ci-row i {
+    width: 24px;
+    /* fixed width for alignment */
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.btn-block-primary {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-block-primary:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Authors - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="css/fund.css?v=1.0.1">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>BookSphere</h1>
+                        <p>Welcome to BookSphere</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- Fund Hero -->
+                <section class="fund-hero">
+                    <div class="fund-hero-content">
+                        <div class="hero-top-label"><i class="fa-solid fa-rocket"></i> Support Emerging Authors</div>
+                        <h2>Crowdfunding for Authors</h2>
+                        <p>Help bring new books to life! Fund authors before publication and get exclusive rewards.</p>
+
+                        <div class="hero-stats-row">
+                            <div class="stat-card-dark">
+                                <div class="sc-icon" style="color: #60a5fa;"><i class="fa-solid fa-shuttle-space"></i>
+                                </div>
+                                <div class="sc-val" id="header-active-campaigns">0</div>
+                                <div class="sc-label">Active Campaigns</div>
+                            </div>
+                            <div class="stat-card-dark">
+                                <div class="sc-icon" style="color: #fca5a5;"><i class="fa-regular fa-heart"></i></div>
+                                <div class="sc-val" id="header-projects-backed">0</div>
+                                <div class="sc-label">Projects Backed</div>
+                            </div>
+                            <div class="stat-card-dark">
+                                <div class="sc-icon" style="color: #fbbf24;"><i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <div class="sc-val" id="header-total-pledged">$0</div>
+                                <div class="sc-label">Total Pledged</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs & Filter -->
+                <div class="filters-container">
+                    <div class="comm-tabs">
+                        <button class="comm-tab active" id="tab-explore">Explore Campaigns</button>
+                        <button class="comm-tab" id="tab-my-backed">My Backed Projects <span class="count-badge hidden"
+                                id="backed-count">0</span></button>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button class="btn-sm btn-primary hidden" id="create-campaign-btn">
+                            <i class="fa-solid fa-plus"></i> Create Campaign
+                        </button>
+                        <button class="btn-sm btn-white"> <i class="fa-solid fa-filter"></i> Filter</button>
+                    </div>
+                </div>
+
+                <div id="content-explore">
+                    <!-- Info Banner -->
+                    <div class="info-banner">
+                        <div class="info-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div class="info-text">
+                            <strong>Support Authors, Earn Rewards!</strong><br>
+                            Back campaigns to help bring new books to life. Earn <span class="highlight-text">5 swap
+                                points
+                                per $1</span> pledged. You can back the same campaign multiple times!
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">All Campaigns</h3>
+
+                    <!-- Campaign Grid -->
+                    <div class="campaign-grid" id="campaigns-grid">
+
+                        <!-- Card 1 -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="The Last Lighthouse Keeper">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Sterling"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">Emma Sterling</div>
+                                        <div class="book-genre">Mystery</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">The Last Lighthouse Keeper</h4>
+                                <p class="book-desc">A gripping mystery about a lighthouse keeper who discovers a
+                                    century-old secret.</p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$11,250</span>
+                                        <span class="amount-goal">of $15,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 342 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 12 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c1"
+                                    data-title="The Last Lighthouse Keeper" data-author="Emma Sterling"
+                                    data-image="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="11250" data-goal="15000" data-backers="342" data-days="12">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="Coding the Future">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Alex Kumar"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">Dr. Alex Kumar</div>
+                                        <div class="book-genre">Technology</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">Coding the Future</h4>
+                                <p class="book-desc">A comprehensive guide to emerging programming paradigms and
+                                    quantum...
+                                </p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$8,400</span>
+                                        <span class="amount-goal">of $20,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill" style="width: 42%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 156 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 28 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c2"
+                                    data-title="Coding the Future" data-author="Dr. Alex Kumar"
+                                    data-image="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="8400" data-goal="20000" data-backers="156" data-days="28">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1518373714866-ea8401307e5e?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="Whispers of the Forest">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luna Martinez"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">Luna Martinez</div>
+                                        <div class="book-genre">Fantasy</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">Whispers of the Forest</h4>
+                                <p class="book-desc">An epic fantasy adventure through enchanted forests and ancient
+                                    magic.
+                                </p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$9,800</span>
+                                        <span class="amount-goal">of $12,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill" style="width: 81%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 287 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 8 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c3"
+                                    data-title="Whispers of the Forest" data-author="Luna Martinez"
+                                    data-image="https://images.unsplash.com/photo-1518373714866-ea8401307e5e?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="9800" data-goal="12000" data-backers="287" data-days="8">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 (Funded) -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <span class="status-badge funded"><i class="fa-solid fa-check"></i> Funded!</span>
+                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="Mindful Living Guide">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Sarah Chen"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">Sarah Chen</div>
+                                        <div class="book-genre">Self-Help</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">Mindful Living Guide</h4>
+                                <p class="book-desc">Practical strategies for finding peace and balance in a chaotic
+                                    world.
+                                </p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$15,500</span>
+                                        <span class="amount-goal">of $12,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill success" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 410 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 3 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c4"
+                                    data-title="Mindful Living Guide" data-author="Sarah Chen"
+                                    data-image="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="15500" data-goal="12000" data-backers="410" data-days="3">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1507842217121-e849386af81e?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="Hidden Histories">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="James Morrison"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">James Morrison</div>
+                                        <div class="book-genre">History</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">Hidden Histories</h4>
+                                <p class="book-desc">Uncovering forgotten stories from the 19th century industrial
+                                    revolution.</p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$4,200</span>
+                                        <span class="amount-goal">of $10,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill" style="width: 42%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 98 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 20 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c5"
+                                    data-title="Hidden Histories" data-author="James Morrison"
+                                    data-image="https://images.unsplash.com/photo-1507842217121-e849386af81e?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="4200" data-goal="10000" data-backers="98" data-days="20">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="campaign-card">
+                            <div class="card-image">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Dr. Maria Santos"
+                                    class="card-image">
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=400&h=250"
+                                    alt="The AI Revolution">
+                            </div>
+                            <div class="card-body">
+                                <div class="author-row">
+                                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Dr. Maria Santos"
+                                        class="author-avatar">
+                                    <div class="author-info">
+                                        <div class="author-name">Dr. Maria Santos</div>
+                                        <div class="book-genre">Technology</div>
+                                    </div>
+                                </div>
+                                <h4 class="book-title">The AI Revolution</h4>
+                                <p class="book-desc">Exploring the ethical implications and future potential of
+                                    artificial
+                                    intelligence.</p>
+
+                                <div class="funding-progress">
+                                    <div class="funding-amounts">
+                                        <span class="amount-raised">$18,900</span>
+                                        <span class="amount-goal">of $25,000</span>
+                                    </div>
+                                    <div class="progress-bar-thin">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="campaign-meta">
+                                    <span><i class="fa-solid fa-users"></i> 520 backers</span>
+                                    <span><i class="fa-regular fa-clock"></i> 15 days left</span>
+                                </div>
+
+                                <button class="btn-block-primary btn-back-project" data-id="c6"
+                                    data-title="The AI Revolution" data-author="Dr. Maria Santos"
+                                    data-image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=400&h=250"
+                                    data-raised="18900" data-goal="25000" data-backers="520" data-days="15">
+                                    <i class="fa-solid fa-rocket"></i> Back This Project
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- My Backed Projects Section (Initially Hidden) -->
+                <div id="content-my-backed" class="hidden">
+                    <h3 class="section-title">My Backed Projects</h3>
+                    <div id="backed-projects-list" class="backed-list">
+                        <div class="empty-state">
+                            <i class="fa-solid fa-shuttle-space"></i>
+                            <p>You haven't backed any projects yet.</p>
+                            <button class="btn btn-white"
+                                onclick="document.getElementById('tab-explore').click()">Explore Campaigns</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Back This Project Modal -->
+    <div id="backing-modal" class="modal-overlay hidden">
+        <div class="modal-content-card funding-modal">
+            <div class="modal-header">
+                <h3>Back This Project</h3>
+                <button class="icon-btn" id="close-backing-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div id="backing-project-summary" class="backing-summary">
+                <!-- Dynamic Content -->
+            </div>
+
+            <div class="reward-tiers">
+                <h5>Choose a Reward Tier</h5>
+
+                <div class="reward-tier-card" data-amount="10">
+                    <div class="tier-info">
+                        <div class="tier-amount">$10</div>
+                        <div class="tier-desc">Digital copy + Thank you in acknowledgments</div>
+                    </div>
+                    <div class="tier-backers">128 backers</div>
+                </div>
+
+                <div class="reward-tier-card" data-amount="25">
+                    <div class="tier-info">
+                        <div class="tier-amount">$25</div>
+                        <div class="tier-desc">Signed paperback + Digital copy</div>
+                    </div>
+                    <div class="tier-backers">156 backers</div>
+                </div>
+
+                <div class="reward-tier-card" data-amount="50">
+                    <div class="tier-info">
+                        <div class="tier-amount">$50</div>
+                        <div class="tier-desc">Hardcover + Exclusive bookmark + Early access</div>
+                    </div>
+                    <div class="tier-backers">58 backers</div>
+                </div>
+            </div>
+
+            <div class="custom-amount-row">
+                <label for="custom-pledge">Or enter custom amount</label>
+                <div class="amount-input-wrapper">
+                    <span>$</span>
+                    <input type="number" id="custom-pledge" placeholder="Enter amount">
+                </div>
+            </div>
+
+            <div id="points-preview" class="points-preview hidden">
+                <i class="fa-solid fa-sparkles"></i> You'll earn: <span id="earned-points">0</span> swap points
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-secondary-modal" id="cancel-backing-btn">Cancel</button>
+                <button class="btn-primary-modal" id="confirm-backing-btn" disabled>
+                    <i class="fa-regular fa-heart"></i> Back This Project
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Campaign Modal -->
+    <div id="create-campaign-modal" class="modal-overlay hidden">
+        <div class="modal-content-card funding-modal">
+            <div class="modal-header">
+                <h3>Create Campaign</h3>
+                <button class="icon-btn" id="close-campaign-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="campaign-form">
+                <div class="form-group">
+                    <label for="book-title">Book Title *</label>
+                    <input type="text" id="book-title" class="form-input" placeholder="Enter book title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author-name">Author Name *</label>
+                    <input type="text" id="author-name" class="form-input" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">Genre *</label>
+                    <select id="genre" class="form-input" required>
+                        <option value="">Select genre</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Biography">Biography</option>
+                        <option value="History">History</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Self-Help">Self-Help</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" class="form-input" rows="4" placeholder="Describe your book project"
+                        required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="funding-goal">Funding Goal ($) *</label>
+                        <input type="number" id="funding-goal" class="form-input" placeholder="5000" min="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campaign-duration">Campaign Duration (Days) *</label>
+                        <input type="number" id="campaign-duration" class="form-input" placeholder="30" min="1" max="90"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="author-photo">Author Photo URL (Optional)</label>
+                    <input type="url" id="author-photo" class="form-input" placeholder="https://example.com/photo.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label for="book-cover">Book Cover URL (Optional)</label>
+                    <input type="url" id="book-cover" class="form-input" placeholder="https://example.com/cover.jpg">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary-modal" id="cancel-campaign-btn">Cancel</button>
+                    <button type="submit" class="btn-primary-modal">
+                        <i class="fa-solid fa-rocket"></i> Launch Campaign
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const API_BASE_URL = 'http://localhost:8080';
+            const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+            const createBtn = document.getElementById('create-campaign-btn');
+            const modal = document.getElementById('create-campaign-modal');
+            const closeBtn = document.getElementById('close-campaign-modal');
+            const cancelBtn = document.getElementById('cancel-campaign-btn');
+            const form = document.getElementById('campaign-form');
+
+            // Only show button if user has AUTHOR role (case-insensitive check)
+            if (createBtn && user.role && user.role.toUpperCase() === 'AUTHOR') {
+                createBtn.classList.remove('hidden');
+
+                // Explicitly attach click listener to open modal
+                createBtn.addEventListener('click', () => {
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+
+            // Close functionality
+            const closeModal = () => {
+                if (modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+            // Close on click outside
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+            }
+
+            // Fallback for form submission if script.js fails
+            if (form && !form.dataset.attached) {
+                form.dataset.attached = "true";
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    console.log("Submitting campaign form...");
+
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+
+                    try {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Launching...';
+
+                        const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+
+                        const payload = {
+                            bookTitle: document.getElementById('book-title').value,
+                            authorName: document.getElementById('author-name').value,
+                            genre: document.getElementById('genre').value,
+                            description: document.getElementById('description').value,
+                            fundingGoal: parseInt(document.getElementById('funding-goal').value),
+                            campaignDuration: parseInt(document.getElementById('campaign-duration').value),
+                            authorPhotoUrl: document.getElementById('author-photo').value || null,
+                            bookCoverUrl: document.getElementById('book-cover').value || null,
+                            authorId: currentUser.id ? Number(currentUser.id) : null
+                        };
+
+                        console.log("Payload:", payload);
+
+                        const response = await fetch(`${API_BASE_URL}/api/campaigns`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.ok) {
+                            alert('Campaign launched successfully!');
+                            if (modal) {
+                                modal.classList.add('hidden');
+                                document.body.style.overflow = '';
+                            }
+                            form.reset();
+                            // Reload page to show new campaign
+                            window.location.reload();
+                        } else {
+                            const errorText = await response.text();
+                            alert('Failed to launch campaign: ' + errorText);
+                        }
+                    } catch (err) {
+                        console.error('Error launching campaign:', err);
+                        alert('Network error. Please check if the backend is running.');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    }
+                });
+            }
+
+            // --- INLINE CAMPAIGN LOADING (Fallback) ---
+            const loadCampaignsInline = async () => {
+                const grid = document.getElementById('campaigns-grid');
+                if (!grid) return;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/campaigns`);
+                    if (response.ok) {
+                        const campaigns = await response.json();
+
+                        // Update active campaigns count in header
+                        const headerCountEl = document.getElementById('header-active-campaigns');
+                        if (headerCountEl) headerCountEl.textContent = campaigns.length;
+
+                        if (campaigns.length > 0) {
+                            grid.innerHTML = ''; // Clear existing content
+
+                            campaigns.forEach(campaign => {
+                                const card = document.createElement('div');
+                                card.className = 'campaign-card';
+                                const defaultCover = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400&h=250';
+                                const defaultAuthorPhoto = 'https://randomuser.me/api/portraits/lego/1.jpg';
+
+                                const amountRaised = campaign.amountRaised || 0;
+                                const backerCount = campaign.backerCount || 0;
+                                const progress = Math.min(100, Math.round((amountRaised / campaign.fundingGoal) * 100));
+
+                                card.innerHTML = `
+                                    <div class="card-image">
+                                        <img src="${campaign.bookCoverUrl || defaultCover}" alt="${campaign.bookTitle}" onerror="this.src='${defaultCover}'">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="author-row">
+                                            <img src="${campaign.authorPhotoUrl || defaultAuthorPhoto}" alt="${campaign.authorName}" class="author-avatar" onerror="this.src='${defaultAuthorPhoto}'">
+                                            <div class="author-info">
+                                                <div class="author-name">${campaign.authorName}</div>
+                                                <div class="book-genre">${campaign.genre}</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="book-title">${campaign.bookTitle}</h4>
+                                        <p class="book-desc">${campaign.description}</p>
+                                        <div class="funding-progress">
+                                            <div class="funding-amounts">
+                                                <span class="amount-raised">$${amountRaised.toLocaleString()}</span>
+                                                <span class="amount-goal">of $${campaign.fundingGoal.toLocaleString()}</span>
+                                            </div>
+                                            <div class="progress-bar-thin">
+                                                <div class="progress-fill" style="width: ${progress}%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-meta">
+                                            <span><i class="fa-solid fa-users"></i> ${backerCount} backers</span>
+                                            <span><i class="fa-regular fa-clock"></i> ${campaign.campaignDuration} days left</span>
+                                        </div>
+                                        <button class="btn-block-primary btn-back-project" data-campaign='${JSON.stringify(campaign).replace(/'/g, "&#39;")}'>
+                                            <i class="fa-solid fa-rocket"></i> Back This Project
+                                        </button>
+                                    </div>
+                                `;
+                                grid.appendChild(card);
+                            });
+
+                            // Re-bind listeners
+                            document.querySelectorAll('.btn-back-project').forEach(btn => {
+                                btn.addEventListener('click', () => {
+                                    try {
+                                        const campaignData = JSON.parse(btn.dataset.campaign);
+                                        openBackingModal(campaignData);
+                                    } catch (e) {
+                                        console.error("Error parsing campaign data", e);
+                                    }
+                                });
+                            });
+                        }
+                    }
+                } catch (err) {
+                    console.error("Error loading campaigns inline:", err);
+                }
+            };
+
+            // Load User Stats
+            const loadUserStats = async () => {
+                const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+                if (!user.id) return;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/campaigns/stats/${user.id}`);
+                    if (response.ok) {
+                        const stats = await response.json();
+                        const backedEl = document.getElementById('header-projects-backed');
+                        const totalEl = document.getElementById('header-total-pledged');
+                        if (backedEl) backedEl.textContent = stats.projectsBacked;
+                        if (totalEl) totalEl.textContent = `$${stats.totalPledged.toLocaleString()}`;
+
+                        const badge = document.getElementById('backed-count');
+                        if (badge) {
+                            badge.textContent = stats.projectsBacked;
+                            badge.classList.toggle('hidden', stats.projectsBacked === 0);
+                        }
+                    }
+                } catch (err) {
+                    console.error("Error loading user stats:", err);
+                }
+            };
+
+            // Load My Backed Projects
+            const loadMyBackings = async () => {
+                const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+                if (!user.id) return;
+
+                const list = document.getElementById('backed-projects-list');
+                if (!list) return;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/campaigns/user/${user.id}/backings`);
+                    if (response.ok) {
+                        const backings = await response.json();
+                        if (backings.length > 0) {
+                            list.innerHTML = '';
+                            backings.forEach(backing => {
+                                const campaign = backing.campaign;
+                                const item = document.createElement('div');
+                                item.className = 'campaign-card';
+                                const progress = Math.min(100, Math.round((campaign.amountRaised / campaign.fundingGoal) * 100));
+
+                                item.innerHTML = `
+                                    <div class="card-image">
+                                        <img src="${campaign.bookCoverUrl || 'https://images.unsplash.com/photo-1544947950-fa07a98d237f'}" alt="${campaign.bookTitle}">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="author-row">
+                                            <div class="author-info">
+                                                <div class="author-name">${campaign.authorName}</div>
+                                                <div class="book-genre">${campaign.genre}</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="book-title">${campaign.bookTitle}</h4>
+                                        <div class="pledge-info" style="margin: 1rem 0; padding: 0.75rem; background: #f8fafc; border-radius: 8px; border-left: 4px solid #2563eb;">
+                                            <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.25rem;">Your Pledge</div>
+                                            <div style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">$${backing.amount}</div>
+                                        </div>
+                                        <div class="funding-progress">
+                                            <div class="funding-amounts">
+                                                <span class="amount-raised">$${campaign.amountRaised.toLocaleString()}</span>
+                                                <span class="amount-goal">of $${campaign.fundingGoal.toLocaleString()}</span>
+                                            </div>
+                                            <div class="progress-bar-thin">
+                                                <div class="progress-fill" style="width: ${progress}%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                                list.appendChild(item);
+                            });
+                        } else {
+                            list.innerHTML = `
+                                <div class="empty-state">
+                                    <i class="fa-solid fa-shuttle-space"></i>
+                                    <p>You haven't backed any projects yet.</p>
+                                    <button class="btn btn-white" onclick="document.getElementById('tab-explore').click()">Explore Campaigns</button>
+                                </div>
+                            `;
+                        }
+                    }
+                } catch (err) {
+                    console.error("Error loading my backings:", err);
+                }
+            };
+
+            // Function to open backing modal (similar to script.js logic)
+            const openBackingModal = (campaign) => {
+                const modal = document.getElementById('backing-modal');
+                const summaryContainer = document.getElementById('backing-project-summary');
+                const closeBtn = document.getElementById('close-backing-modal');
+                const cancelBtn = document.getElementById('cancel-backing-btn');
+
+                if (!modal || !summaryContainer) return;
+
+                summaryContainer.innerHTML = `
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="${campaign.bookCoverUrl || 'https://images.unsplash.com/photo-1544947950-fa07a98d237f'}" 
+                             style="width: 80px; height: 120px; object-fit: cover; border-radius: 8px;">
+                        <div>
+                            <h4 style="margin: 0 0 0.5rem 0;">${campaign.bookTitle}</h4>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">By ${campaign.authorName}</p>
+                            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #60a5fa;">
+                                <i class="fa-solid fa-rocket"></i> Funding Goal: $${campaign.fundingGoal.toLocaleString()}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+
+                // Helper to close
+                const closeBacking = () => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                };
+
+                if (closeBtn) closeBtn.onclick = closeBacking;
+                if (cancelBtn) cancelBtn.onclick = closeBacking;
+                modal.onclick = (e) => { if (e.target === modal) closeBacking(); };
+
+                // --- NEW: Backing Logic ---
+                let confirmBtn = document.getElementById('confirm-backing-btn');
+                const tiers = document.querySelectorAll('.reward-tier-card');
+                const customInput = document.getElementById('custom-pledge');
+                let selectedAmount = 0;
+
+                const updateButtonState = () => {
+                    if (confirmBtn) {
+                        if (selectedAmount > 0) {
+                            confirmBtn.removeAttribute('disabled');
+                            confirmBtn.innerHTML = `<i class="fa-regular fa-heart"></i> Back with $${selectedAmount}`;
+                        } else {
+                            confirmBtn.setAttribute('disabled', 'true');
+                            confirmBtn.innerHTML = `<i class="fa-regular fa-heart"></i> Back This Project`;
+                        }
+                    }
+                };
+
+                // Tier Selection
+                tiers.forEach(tier => {
+                    tier.addEventListener('click', () => {
+                        // Toggle active state
+                        tiers.forEach(t => t.classList.remove('selected-tier')); // You'll need css for this or just style inline
+                        tier.classList.add('selected-tier');
+                        tier.style.borderColor = '#2563eb';
+                        tier.style.backgroundColor = '#eff6ff';
+
+                        // Reset others style
+                        tiers.forEach(t => {
+                            if (t !== tier) {
+                                t.style.borderColor = '';
+                                t.style.backgroundColor = '';
+                            }
+                        });
+
+                        // Clear custom input
+                        if (customInput) customInput.value = '';
+
+                        // Set amount
+                        selectedAmount = parseInt(tier.dataset.amount);
+                        updateButtonState();
+                    });
+                });
+
+                // Custom Input
+                if (customInput) {
+                    customInput.addEventListener('input', (e) => {
+                        // Clear tier selection
+                        tiers.forEach(t => {
+                            t.classList.remove('selected-tier');
+                            t.style.borderColor = '';
+                            t.style.backgroundColor = '';
+                        });
+
+                        const val = parseInt(e.target.value);
+                        selectedAmount = isNaN(val) ? 0 : val;
+                        updateButtonState();
+                    });
+                }
+
+                // Confirm Action
+                if (confirmBtn) {
+                    // Remove old listeners to prevent duplicates if any
+                    const newBtn = confirmBtn.cloneNode(true);
+                    confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
+                    confirmBtn = newBtn; // Update reference for closure
+
+                    newBtn.addEventListener('click', async () => {
+                        const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+                        if (!user.id) {
+                            alert("Please log in to back projects.");
+                            return;
+                        }
+
+                        newBtn.disabled = true;
+                        newBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+
+                        try {
+                            const response = await fetch(`${API_BASE_URL}/api/campaigns/${campaign.id}/back`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ userId: user.id, amount: selectedAmount })
+                            });
+
+                            if (response.ok) {
+                                alert(`Success! You have backed "${campaign.bookTitle}"!`);
+                                closeBacking();
+                                loadCampaignsInline();
+                                loadUserStats();
+                                loadMyBackings();
+                            } else {
+                                alert("Failed to process pledge. Please try again.");
+                                newBtn.disabled = false;
+                                updateButtonState();
+                            }
+                        } catch (err) {
+                            console.error("Backing error:", err);
+                            alert("Connection error! Please ensure the backend server is running at " + API_BASE_URL);
+                            newBtn.disabled = false;
+                            updateButtonState();
+                        }
+                    });
+
+                    // Re-run update state to ensure it starts correctly
+                    if (selectedAmount > 0) {
+                        newBtn.removeAttribute('disabled');
+                        newBtn.innerHTML = `<i class="fa-regular fa-heart"></i> Back with $${selectedAmount}`;
+                    } else {
+                        newBtn.setAttribute('disabled', 'true');
+                    }
+                }
+            };
+
+            // Tab toggling
+            const tabExplore = document.getElementById('tab-explore');
+            const tabMyBacked = document.getElementById('tab-my-backed');
+            const contentExplore = document.getElementById('content-explore');
+            const contentMyBacked = document.getElementById('content-my-backed');
+
+            if (tabExplore && tabMyBacked) {
+                tabExplore.addEventListener('click', () => {
+                    tabExplore.classList.add('active');
+                    tabMyBacked.classList.remove('active');
+                    contentExplore.classList.remove('hidden');
+                    contentMyBacked.classList.add('hidden');
+                    loadCampaignsInline();
+                });
+
+                tabMyBacked.addEventListener('click', () => {
+                    tabMyBacked.classList.add('active');
+                    tabExplore.classList.remove('active');
+                    contentMyBacked.classList.remove('hidden');
+                    contentExplore.classList.add('hidden');
+                    loadMyBackings();
+                });
+            }
+
+            // Init
+            loadCampaignsInline();
+            loadUserStats();
+            loadMyBackings();
+        });
+    </script>
+</body>
+
+</html>

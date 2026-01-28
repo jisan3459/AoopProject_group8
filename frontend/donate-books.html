@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Books - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>BookSphere</h1>
+                        <p>Welcome to BookSphere</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">MJ</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- Donate Hero -->
+                <section class="donate-hero">
+                    <div class="donate-hero-content">
+                        <div class="hero-top-label"><i class="fa-solid fa-heart"></i> Share the Joy of Reading</div>
+                        <h2>Book Donation Program</h2>
+                        <p>Donate books to libraries, schools, and NGOs. Every donation earns you Swap Points and helps
+                            spread literacy.</p>
+
+                        <div class="hero-stats-row">
+                            <div class="stat-card-dark">
+                                <div class="sc-icon"><i class="fa-solid fa-gift"></i></div>
+                                <div class="sc-val">0</div>
+                                <div class="sc-label">Books Donated</div>
+                            </div>
+                            <div class="stat-card-dark">
+                                <div class="sc-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div class="sc-val">0</div>
+                                <div class="sc-label">Points Earned</div>
+                            </div>
+                            <div class="stat-card-dark">
+                                <div class="sc-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                <div class="sc-val">Top 15%</div>
+                                <div class="sc-label">Donor Rank</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs -->
+                <div class="comm-tabs-container">
+                    <div class="comm-tabs">
+                        <button class="comm-tab active" id="tab-donate">Donate Books</button>
+                        <button class="comm-tab" id="tab-my-donations">My Donations</button>
+                    </div>
+                </div>
+
+                <div id="content-donate">
+
+                    <!-- Org Search Section -->
+                    <section class="org-section">
+                        <div class="org-actions-row">
+                            <div class="spacer"></div> <!-- Pushes button to right -->
+                            <button class="btn-dark-icon" id="btn-upload-org"><i class="fa-solid fa-upload"></i> Upload
+                                as
+                                Organization</button>
+                        </div>
+
+                        <div class="org-search-box">
+                            <h3>Find an Organization</h3>
+                            <p>Search for libraries, schools, or NGOs to donate your books</p>
+                            <div class="search-input-wrapper">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search by name, location, or type...">
+                            </div>
+                        </div>
+
+                        <!-- Organization Grid -->
+                        <div class="org-grid" id="org-grid">
+
+                            <!-- Card 1 -->
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-logo-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=100&h=100"
+                                            alt="Reading Rainbow">
+                                    </div>
+                                    <div class="org-info">
+                                        <div class="org-name-row">
+                                            <h4>Reading Rainbow Foundation</h4>
+                                            <span class="badge-pill top-rated">Top Rated</span>
+                                        </div>
+                                        <div class="org-meta">
+                                            <span class="org-type"><i class="fa-solid fa-building-columns"></i>
+                                                Library</span>
+                                            <span class="org-loc"><i class="fa-solid fa-location-dot"></i> New York,
+                                                NY</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="org-desc">Providing books to underserved communities across NYC</p>
+
+                                <div class="progress-section">
+                                    <div class="progress-labels">
+                                        <span>Books Collected</span>
+                                        <span class="prog-val">1,847 / 2,500</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="width: 74%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="impact-text">
+                                    <i class="fa-solid fa-child-reaching"></i> Impact: 12,000+ children reached
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-logo-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=100&h=100"
+                                            alt="Schools for All">
+                                    </div>
+                                    <div class="org-info">
+                                        <div class="org-name-row">
+                                            <h4>Schools for All</h4>
+                                            <span class="badge-pill verified">Verified</span>
+                                        </div>
+                                        <div class="org-meta">
+                                            <span class="org-type"><i class="fa-solid fa-school"></i> School</span>
+                                            <span class="org-loc"><i class="fa-solid fa-location-dot"></i> Chicago,
+                                                IL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="org-desc">Building libraries in rural schools nationwide</p>
+
+                                <div class="progress-section">
+                                    <div class="progress-labels">
+                                        <span>Books Collected</span>
+                                        <span class="prog-val">3,200 / 5,000</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="width: 64%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="impact-text">
+                                    <i class="fa-solid fa-ribbon"></i> Impact: 45 schools supported
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-logo-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=100&h=100"
+                                            alt="Books Without Borders">
+                                    </div>
+                                    <div class="org-info">
+                                        <div class="org-name-row">
+                                            <h4>Books Without Borders</h4>
+                                            <span class="badge-pill global">Global Impact</span>
+                                        </div>
+                                        <div class="org-meta">
+                                            <span class="org-type"><i class="fa-solid fa-earth-americas"></i> NGO</span>
+                                            <span class="org-loc"><i class="fa-solid fa-location-dot"></i>
+                                                International</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="org-desc">Sending educational materials to developing nations</p>
+
+                                <div class="progress-section">
+                                    <div class="progress-labels">
+                                        <span>Books Collected</span>
+                                        <span class="prog-val">8,900 / 10,000</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="width: 89%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="impact-text">
+                                    <i class="fa-solid fa-globe"></i> Impact: 15 countries served
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="org-card">
+                                <div class="org-header">
+                                    <div class="org-logo-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=100&h=100"
+                                            alt="Community Learning Center">
+                                    </div>
+                                    <div class="org-info">
+                                        <div class="org-name-row">
+                                            <h4>Community Learning Center</h4>
+                                            <span class="badge-pill local">Local Hero</span>
+                                        </div>
+                                        <div class="org-meta">
+                                            <span class="org-type"><i class="fa-solid fa-users"></i> Community</span>
+                                            <span class="org-loc"><i class="fa-solid fa-location-dot"></i> Seattle,
+                                                WA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="org-desc">After-school reading programs for at-risk youth</p>
+
+                                <div class="progress-section">
+                                    <div class="progress-labels">
+                                        <span>Books Collected</span>
+                                        <span class="prog-val">450 / 500</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="impact-text">
+                                    <i class="fa-solid fa-graduation-cap"></i> Impact: 200+ students tutored
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- My Donations Section (Initially Hidden) -->
+                <div id="content-my-donations" class="hidden">
+                    <section class="org-section">
+                        <div class="org-search-box" style="margin-bottom: 2rem;">
+                            <h3>Your Donation History</h3>
+                            <p>Track your contributions and the impact you've made</p>
+                        </div>
+
+                        <div class="donations-grid">
+                            <!-- Sample Donation 1 -->
+                            <div class="donation-card">
+                                <div class="don-info">
+                                    <div class="don-icon"><i class="fa-solid fa-book"></i></div>
+                                    <div class="don-text">
+                                        <h4>5 Children's Books</h4>
+                                        <p>To: Reading Rainbow Foundation</p>
+                                    </div>
+                                </div>
+                                <div class="don-status">
+                                    <div class="don-date">Jan 15, 2024</div>
+                                    <span class="status-badge completed">Completed</span>
+                                    <div class="don-points">+50 Points</div>
+                                </div>
+                            </div>
+
+                            <!-- Sample Donation 2 -->
+                            <div class="donation-card">
+                                <div class="don-info">
+                                    <div class="don-icon"><i class="fa-solid fa-box-archive"></i></div>
+                                    <div class="don-text">
+                                        <h4>12 Academic Textbooks</h4>
+                                        <p>To: Schools for All</p>
+                                    </div>
+                                </div>
+                                <div class="don-status">
+                                    <div class="don-date">Jan 02, 2024</div>
+                                    <span class="status-badge completed">Completed</span>
+                                    <div class="don-points">+120 Points</div>
+                                </div>
+                            </div>
+
+                            <!-- Sample Donation 3 -->
+                            <div class="donation-card">
+                                <div class="don-info">
+                                    <div class="don-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                                    <div class="don-text">
+                                        <h4>3 Fiction Novels</h4>
+                                        <p>To: Community Learning Center</p>
+                                    </div>
+                                </div>
+                                <div class="don-status">
+                                    <div class="don-date">Just Now</div>
+                                    <span class="status-badge pending">In Transit</span>
+                                    <div class="don-points">Pending</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <!-- Register as Organization Modal -->
+    <div id="org-modal" class="modal-overlay hidden">
+        <div class="modal-content-card">
+            <div class="modal-header">
+                <h3>Register Organization</h3>
+                <button class="icon-btn" id="close-org-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <p class="modal-subtitle">Register your organization to start receiving book donations</p>
+
+            <form id="register-org-form">
+                <div class="form-group">
+                    <label for="org-name">Organization Name *</label>
+                    <input type="text" id="org-name" placeholder="Enter organization name..." required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="org-type">Organization Type</label>
+                        <div class="select-wrapper">
+                            <select id="org-type" required>
+                                <option value="Library">Library</option>
+                                <option value="School">School</option>
+                                <option value="NGO">NGO</option>
+                                <option value="Community">Community Center</option>
+                                <option value="Hospital">Hospital</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-location">Location *</label>
+                        <input type="text" id="org-location" placeholder="e.g., New York, NY" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="org-description">Description *</label>
+                    <textarea id="org-description" rows="3" placeholder="Briefly describe your mission..."
+                        required></textarea>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="org-goal">Donation Goal (Books)</label>
+                        <input type="number" id="org-goal" placeholder="e.g., 1000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-impact">Impact Metric</label>
+                        <input type="text" id="org-impact" placeholder="e.g., 500+ kids reached">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="org-logo">Logo URL (Optional)</label>
+                    <input type="text" id="org-logo" placeholder="https://example.com/logo.jpg">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary-modal" id="cancel-org-btn">Cancel</button>
+                    <button type="submit" class="btn-primary-modal" style="background:#1e293b;"><i
+                            class="fa-solid fa-building"></i> Register Organization</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donate Book Modal -->
+    <div id="donate-book-modal" class="modal-overlay hidden">
+        <div class="modal-content-card">
+            <div class="modal-header">
+                <h3 id="donate-modal-title">Donate Books</h3>
+                <button class="icon-btn" id="close-donate-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <p class="modal-subtitle">Share your books with <span id="target-org-name"
+                    style="font-weight: 700; color: #1e293b;"></span></p>
+
+            <form id="donate-book-form">
+                <input type="hidden" id="target-org-id">
+                <div class="form-group">
+                    <label for="donation-book-title">Book Title(s) / Category *</label>
+                    <input type="text" id="donation-book-title" placeholder="e.g., 5 Children's Storybooks" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="donation-quantity">Number of Books *</label>
+                    <input type="number" id="donation-quantity" min="1" value="1" required>
+                </div>
+
+                <div class="points-preview"
+                    style="margin: 1rem 0; padding: 1rem; background: #f0fdf4; border-radius: 12px; border: 1px dashed #22c55e; display: flex; align-items: center; gap: 0.75rem;">
+                    <div
+                        style="width: 40px; height: 40px; background: #dcfce7; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-size: 1.2rem;">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.85rem; color: #166534; font-weight: 500;">You'll earn</div>
+                        <div style="font-weight: 700; color: #14532d;"><span id="estimated-points">10</span> Swap Points
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary-modal" id="cancel-donate-btn">Cancel</button>
+                    <button type="submit" class="btn-primary-modal" style="background:#22c55e;"><i
+                            class="fa-solid fa-heart"></i> Complete Donation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const API_BASE_URL = 'http://localhost:8080';
+            const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+
+            // --- LOADING ORGANIZATIONS ---
+            const loadOrganizations = async () => {
+                const grid = document.getElementById('org-grid');
+                if (!grid) return;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/donations/organizations`);
+                    if (response.ok) {
+                        const orgs = await response.json();
+                        grid.innerHTML = '';
+                        orgs.forEach(org => {
+                            const progress = Math.min(100, Math.round((org.booksCollected / org.booksGoal) * 100));
+                            const card = document.createElement('div');
+                            card.className = 'org-card';
+                            card.innerHTML = `
+                                <div class="org-header">
+                                    <div class="org-logo-wrapper">
+                                        <img src="${org.logoUrl || 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f'}" alt="${org.organizationName}">
+                                    </div>
+                                    <div class="org-info">
+                                        <div class="org-name-row">
+                                            <h4>${org.organizationName}</h4>
+                                            ${org.booksCollected > 1000 ? '<span class="badge-pill top-rated">Top Rated</span>' : '<span class="badge-pill verified">Verified</span>'}
+                                        </div>
+                                        <div class="org-meta">
+                                            <span class="org-type"><i class="fa-solid fa-building-columns"></i> ${org.description ? org.description.split(' ')[0] : 'NGO'}</span>
+                                            <span class="org-loc"><i class="fa-solid fa-location-dot"></i> ${org.location}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="org-desc">${org.description}</p>
+                                <div class="progress-section">
+                                    <div class="progress-labels">
+                                        <span>Books Collected</span>
+                                        <span class="prog-val">${org.booksCollected.toLocaleString()} / ${org.booksGoal.toLocaleString()}</span>
+                                    </div>
+                                    <div class="progress-bar-track">
+                                        <div class="progress-bar-fill" style="width: ${progress}%;"></div>
+                                    </div>
+                                </div>
+                                <div class="impact-text">
+                                    <i class="fa-solid fa-child-reaching"></i> ${org.impactMessage || 'Spreading literacy'}
+                                </div>
+                                <button class="btn-donate-now" data-id="${org.id}" data-name="${org.organizationName}">
+                                    <i class="fa-solid fa-hand-holding-heart"></i> Donate Books Now
+                                </button>
+                            `;
+                            grid.appendChild(card);
+                        });
+
+                        // Re-bind donation buttons
+                        document.querySelectorAll('.btn-donate-now').forEach(btn => {
+                            btn.addEventListener('click', () => openDonateModal(btn.dataset.id, btn.dataset.name));
+                        });
+                    }
+                } catch (err) {
+                    console.error("Error loading organizations:", err);
+                }
+            };
+
+            // --- DONATION MODAL ---
+            const donateModal = document.getElementById('donate-book-modal');
+            const openDonateModal = (id, name) => {
+                if (!currentUser.id) {
+                    alert("Please log in to donate books.");
+                    return;
+                }
+                document.getElementById('target-org-id').value = id;
+                document.getElementById('target-org-name').textContent = name;
+                donateModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeDonateModal = () => {
+                donateModal.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.getElementById('donate-book-form').reset();
+            };
+
+            document.getElementById('close-donate-modal')?.addEventListener('click', closeDonateModal);
+            document.getElementById('cancel-donate-btn')?.addEventListener('click', closeDonateModal);
+
+            // Points estimation
+            document.getElementById('donation-quantity')?.addEventListener('input', (e) => {
+                const qty = parseInt(e.target.value) || 0;
+                document.getElementById('estimated-points').textContent = qty * 10;
+            });
+
+            // Handle donation submission
+            document.getElementById('donate-book-form')?.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const orgId = document.getElementById('target-org-id').value;
+                const bookTitle = document.getElementById('donation-book-title').value;
+                const quantity = document.getElementById('donation-quantity').value;
+                const submitBtn = e.target.querySelector('button[type="submit"]');
+
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/donations/${orgId}/donate`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ userId: currentUser.id, bookTitle, quantity })
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        alert(`Thank you! You've earned ${result.pointsEarned} Swap Points!`);
+                        location.reload(); // Refresh to update stats
+                    } else {
+                        alert("Failed to process donation. Please try again.");
+                    }
+                } catch (err) {
+                    console.error("Donation error:", err);
+                    alert("Connection error. Please ensure the backend is running.");
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-heart"></i> Complete Donation';
+                }
+            });
+
+            // --- USER STATS ---
+            const loadUserStats = async () => {
+                if (!currentUser.id) return;
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/donations/user/${currentUser.id}/stats`);
+                    if (response.ok) {
+                        const stats = await response.json();
+                        const donorCountEls = document.querySelectorAll('.sc-val');
+                        if (donorCountEls[0]) donorCountEls[0].textContent = stats.booksDonated;
+                        if (donorCountEls[1]) donorCountEls[1].textContent = stats.pointsEarned;
+                    }
+                } catch (err) {
+                    console.error("Error loading user stats:", err);
+                }
+            };
+
+            // --- DONATION HISTORY ---
+            const loadHistory = async () => {
+                if (!currentUser.id) return;
+                const list = document.querySelector('.donations-grid');
+                if (!list) return;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/donations/user/${currentUser.id}/history`);
+                    if (response.ok) {
+                        const history = await response.json();
+                        if (history.length > 0) {
+                            list.innerHTML = '';
+                            history.forEach(don => {
+                                const date = new Date(don.donationDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                                const card = document.createElement('div');
+                                card.className = 'donation-card';
+                                card.innerHTML = `
+                                    <div class="don-info">
+                                        <div class="don-icon"><i class="fa-solid fa-book"></i></div>
+                                        <div class="don-text">
+                                            <h4>${don.quantity} ${don.bookTitle}</h4>
+                                            <p>To: ${don.organization.organizationName}</p>
+                                        </div>
+                                    </div>
+                                    <div class="don-status">
+                                        <div class="don-date">${date}</div>
+                                        <span class="status-badge completed">Completed</span>
+                                        <div class="don-points">+${don.pointsEarned} Points</div>
+                                    </div>
+                                `;
+                                list.appendChild(card);
+                            });
+                        }
+                    }
+                } catch (err) {
+                    console.error("Error loading history:", err);
+                }
+            };
+
+            // --- TAB LOGIC ---
+            const tabDonate = document.getElementById('tab-donate');
+            const tabHistory = document.getElementById('tab-my-donations');
+            const contentDonate = document.getElementById('content-donate');
+            const contentHistory = document.getElementById('content-my-donations');
+
+            tabDonate?.addEventListener('click', () => {
+                tabDonate.classList.add('active');
+                tabHistory.classList.remove('active');
+                contentDonate.classList.remove('hidden');
+                contentHistory.classList.add('hidden');
+            });
+
+            tabHistory?.addEventListener('click', () => {
+                tabHistory.classList.add('active');
+                tabDonate.classList.remove('active');
+                contentHistory.classList.remove('hidden');
+                contentDonate.classList.add('hidden');
+                loadHistory();
+            });
+
+            // --- ORG MODAL ---
+            const orgModal = document.getElementById('org-modal');
+            const btnUploadOrg = document.getElementById('btn-upload-org');
+            const closeOrgModal = document.getElementById('close-org-modal');
+            const cancelOrgBtn = document.getElementById('cancel-org-btn');
+
+            btnUploadOrg?.addEventListener('click', () => {
+                if (!currentUser.id) {
+                    alert("Please log in to register an organization.");
+                    return;
+                }
+                orgModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+
+            const hideOrgModal = () => {
+                orgModal.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.getElementById('register-org-form').reset();
+            };
+
+            closeOrgModal?.addEventListener('click', hideOrgModal);
+            cancelOrgBtn?.addEventListener('click', hideOrgModal);
+
+            // --- ORG REGISTRATION ---
+            document.getElementById('register-org-form')?.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const payload = {
+                    organizationName: document.getElementById('org-name').value,
+                    location: document.getElementById('org-location').value,
+                    description: document.getElementById('org-description').value,
+                    booksGoal: parseInt(document.getElementById('org-goal').value),
+                    impactMessage: document.getElementById('org-impact').value,
+                    logoUrl: document.getElementById('org-logo').value,
+                    authorId: currentUser.id
+                };
+                console.log("Registering Organization Payload:", payload);
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/donations/register`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        const saved = await response.json();
+                        alert(`Success! "${saved.organizationName}" registered with Database ID: ${saved.id}. It is now pending approval.`);
+                        location.reload();
+                    } else {
+                        const errorText = await response.text();
+                        alert("Failed to register. Server said: " + (errorText || "Unknown error"));
+                    }
+                } catch (err) {
+                    console.error("Registration error:", err);
+                    alert("Connection error. Please ensure the backend is running at http://localhost:8080");
+                }
+            });
+
+            // Init
+            loadOrganizations();
+            loadUserStats();
+        });
+    </script>
+</body>
+
+</html>

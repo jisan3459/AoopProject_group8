@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ebooks.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>My Library</h1>
+                        <p>Manage your personal book collection</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </header>
+
+            <!-- Library Content -->
+            <div class="dashboard-scroll">
+
+                <!-- Hero Banner -->
+                <section class="dash-hero library-hero">
+                    <div class="dash-hero-content">
+                        <div class="welcome-badge">
+                            <i class="fa-solid fa-star"></i> Your Personal Collection
+                        </div>
+                        <h2>My Library</h2>
+                        <p>Manage your reading collection, track progress, and discover your next favorite book.</p>
+                    </div>
+
+                    <div class="library-hero-stats">
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-num">0</span>
+                            <span class="lib-stat-label">E-Books</span>
+                        </div>
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-num">0</span>
+                            <span class="lib-stat-label">Audiobooks</span>
+                        </div>
+                        <div class="lib-stat-box highlight-box">
+                            <span class="lib-stat-num">90%</span>
+                            <span class="lib-stat-label">Reading Goal</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reading Goals -->
+                <section class="library-section">
+                    <h3>Reading Goals</h3>
+                    <div class="library-goals-grid">
+                        <!-- Goal Card 1 -->
+                        <div class="lib-goal-card">
+                            <div class="goal-top-row">
+                                <div class="goal-icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+                                <span class="badge-pill">90%</span>
+                            </div>
+                            <h4>2024 Reading Goal</h4>
+                            <div class="goal-numbers">
+                                <span class="big-num">47</span> <span class="total-num">/ 52</span>
+                            </div>
+                            <div class="progress-bar-xs mt-2">
+                                <div class="progress-fill-blue" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Goal Card 2 -->
+                        <div class="lib-goal-card">
+                            <div class="goal-top-row">
+                                <div class="goal-icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+                                <span class="badge-pill">83%</span>
+                            </div>
+                            <h4>Pages This Month</h4>
+                            <div class="goal-numbers">
+                                <span class="big-num">1247</span> <span class="total-num">/ 1500</span>
+                            </div>
+                            <div class="progress-bar-xs mt-2">
+                                <div class="progress-fill-blue" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <!-- Goal Card 3 -->
+                        <div class="lib-goal-card">
+                            <div class="goal-top-row">
+                                <div class="goal-icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+                                <span class="badge-pill">67%</span>
+                            </div>
+                            <h4>Genres Explored</h4>
+                            <div class="goal-numbers">
+                                <span class="big-num">8</span> <span class="total-num">/ 12</span>
+                            </div>
+                            <div class="progress-bar-xs mt-2">
+                                <div class="progress-fill-blue" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- My E-Books / Empty State -->
+                <section class="library-section">
+                    <div class="section-title-row">
+                        <h3>My E-Books</h3>
+                        <button class="btn btn-sm btn-dark"><i class="fa-solid fa-plus"></i> Add Books</button>
+                    </div>
+
+                    <div class="library-grid books-grid">
+                        <!-- Books will be rendered here dynamically -->
+                    </div>
+
+                    <div class="empty-state-card">
+                        <div class="empty-icon-circle">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3>Your Library is Empty</h3>
+                        <p>Start building your digital library by adding e-books from our free collection</p>
+                        <a href="ebooks.html" class="btn btn-primary btn-orange"><i class="fa-solid fa-plus"></i> Browse
+                            E-Books</a>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

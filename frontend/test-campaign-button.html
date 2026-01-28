@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Button Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #E87A38;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #d66a2e;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Campaign Button Functionality Test</h1>
+
+    <div class="test-section">
+        <h2>Test 1: Button Click Detection</h2>
+        <button id="test-btn-1">Click Me - Test 1</button>
+        <div id="status-1" class="status" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Modal Open/Close</h2>
+        <button id="test-btn-2">Open Modal - Test 2</button>
+        <div id="modal-test" class="modal">
+            <div class="modal-content">
+                <h3>Test Modal</h3>
+                <p>This modal opened successfully!</p>
+                <button id="close-modal">Close Modal</button>
+            </div>
+        </div>
+        <div id="status-2" class="status" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Check Dashboard Elements</h2>
+        <button id="test-btn-3">Check Elements</button>
+        <div id="status-3" class="status" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Click each test button above</li>
+            <li>Verify that status messages appear</li>
+            <li>If all tests pass, the issue is with the dashboard page specifically</li>
+            <li>Open browser console (F12) and check for JavaScript errors</li>
+        </ol>
+    </div>
+
+    <script>
+        // Test 1: Basic click detection
+        document.getElementById('test-btn-1').addEventListener('click', function () {
+            const status = document.getElementById('status-1');
+            status.style.display = 'block';
+            status.textContent = '✓ Button click detected successfully!';
+            console.log('Test 1 passed');
+        });
+
+        // Test 2: Modal functionality
+        document.getElementById('test-btn-2').addEventListener('click', function () {
+            const modal = document.getElementById('modal-test');
+            const status = document.getElementById('status-2');
+            modal.classList.add('show');
+            status.style.display = 'block';
+            status.textContent = '✓ Modal opened successfully!';
+            console.log('Test 2: Modal opened');
+        });
+
+        document.getElementById('close-modal').addEventListener('click', function () {
+            const modal = document.getElementById('modal-test');
+            modal.classList.remove('show');
+            console.log('Test 2: Modal closed');
+        });
+
+        // Test 3: Check for dashboard elements
+        document.getElementById('test-btn-3').addEventListener('click', function () {
+            const status = document.getElementById('status-3');
+            status.style.display = 'block';
+
+            // Check if we can access the campaign elements
+            const campaignBtn = document.getElementById('create-campaign-btn');
+            const campaignModal = document.getElementById('create-campaign-modal');
+
+            let message = '';
+            if (campaignBtn) {
+                message += '✓ Create Campaign button found\n';
+            } else {
+                message += '✗ Create Campaign button NOT found\n';
+            }
+
+            if (campaignModal) {
+                message += '✓ Campaign modal found\n';
+            } else {
+                message += '✗ Campaign modal NOT found\n';
+            }
+
+            status.textContent = message;
+            status.style.whiteSpace = 'pre-line';
+            console.log('Test 3 results:', message);
+        });
+
+        console.log('Test page loaded successfully');
+    </script>
+</body>
+
+</html>

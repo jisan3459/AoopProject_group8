@@ -1,0 +1,541 @@
+/* ============================
+   Donate Books Page Styles
+   ============================ */
+
+/* Hero Section */
+.donate-hero {
+    background: linear-gradient(100deg, #1e3a8a 0%, #3b4252 40%, #c2410c 100%);
+    /* Approximation of the screenshot gradient: Dark Blue -> Orange/Brown transition */
+    background: linear-gradient(90deg, #1f2937 0%, #2d3748 30%, #a0522d 100%);
+    border-radius: 0 0 24px 24px;
+    /* Only round bottom corners if it spans full width, but usually container */
+    border-radius: 24px;
+    padding: 3.5rem 4rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.donate-hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.donate-hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.donate-hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.hero-stats-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-card-dark {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sc-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+    /* Goldish for icons */
+}
+
+/* Specific icon colors */
+.stat-card-dark:nth-child(1) .sc-icon {
+    color: #bfdbfe;
+}
+
+.stat-card-dark:nth-child(2) .sc-icon {
+    color: #fde047;
+}
+
+.stat-card-dark:nth-child(3) .sc-icon {
+    color: #ffffff;
+}
+
+.sc-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.sc-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+
+/* Org Section */
+.org-section {
+    padding: 0 1rem;
+}
+
+.org-actions-row {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.btn-dark-icon {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: background 0.2s;
+}
+
+.btn-dark-icon:hover {
+    background: #334155;
+}
+
+.org-search-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.org-search-box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.org-search-box p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.search-input-wrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input-wrapper input:focus {
+    border-color: #3b82f6;
+}
+
+/* Org Grid */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.org-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 2.25rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.org-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-8px);
+    border-color: #e2e8f0;
+}
+
+.org-header {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.org-logo-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.org-logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.org-info {
+    flex: 1;
+}
+
+.org-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+}
+
+.org-name-row h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.badge-pill {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-pill.top-rated {
+    background: #E0F2FE;
+    color: #0284C7;
+    border: 1px solid #BAE6FD;
+}
+
+.badge-pill.verified {
+    background: #F0FDF4;
+    color: #16A34A;
+    border: 1px solid #BBF7D0;
+}
+
+.badge-pill.global {
+    background: #FEF3C7;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+}
+
+.badge-pill.local {
+    background: #F3E8FF;
+    color: #9333EA;
+    border: 1px solid #E9D5FF;
+}
+
+.org-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.org-meta i {
+    color: #94a3b8;
+    margin-right: 0.3rem;
+}
+
+.org-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.progress-section {
+    margin-bottom: 1.5rem;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.6rem;
+}
+
+.prog-val {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.progress-bar-track {
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+    border-radius: 10px;
+}
+
+.impact-text {
+    font-size: 0.9rem;
+    color: #c2410c;
+    /* Matches hero accent */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 1rem;
+    background: #fff7ed;
+    border-radius: 12px;
+    border: 1px solid #ffedd5;
+}
+
+/* Premium Donation Button */
+.btn-donate-now {
+    width: 100%;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(30, 41, 59, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.btn-donate-now::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.btn-donate-now:hover {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(30, 41, 59, 0.3);
+}
+
+.btn-donate-now:hover::before {
+    left: 100%;
+}
+
+.btn-donate-now:active {
+    transform: scale(0.98);
+}
+
+.btn-donate-now i {
+    font-size: 1.1rem;
+    color: #fdba74; /* Soft orange icon */
+}
+
+@media (max-width: 768px) {
+    .donate-hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-stats-row {
+        flex-wrap: wrap;
+    }
+
+    .stat-card-dark {
+        flex: 1 0 140px;
+    }
+
+    .org-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Tabs */
+.comm-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.comm-tabs {
+    background: #f1f5f9;
+    padding: 0.3rem;
+    border-radius: 50px;
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.comm-tab {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.comm-tab:hover {
+    color: #334155;
+}
+
+.comm-tab.active {
+    background: white;
+    color: #1e293b;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* My Donations Section */
+.donations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.donation-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.donation-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.don-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.don-icon {
+    width: 48px;
+    height: 48px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e3a8a;
+    font-size: 1.2rem;
+}
+
+.don-text h4 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.don-text p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.don-status {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.don-date {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    min-width: 100px;
+}
+
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.completed {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.status-badge.pending {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.don-points {
+    font-weight: 700;
+    color: #1e3a8a;
+    font-size: 1rem;
+    min-width: 80px;
+    text-align: right;
+}

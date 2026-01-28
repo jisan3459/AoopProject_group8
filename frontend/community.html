@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="icon-warning"><i class="fa-solid fa-bullseye"></i></div>
+                        <span class="goal-title">2024 Reading Goal</span>
+                    </div>
+                    <p class="goal-progress-text">47 of 52 books</p>
+                    <div class="progress-bar-sm">
+                        <div class="progress-fill-orange" style="width: 90%"></div>
+                    </div>
+                    <div class="goal-footer">
+                        <span>90% complete</span>
+                        <span>5 to go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-regular fa-user"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>Community</h1>
+                        <p>Connect with book lovers worldwide</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- Community Hero -->
+                <section class="community-hero">
+                    <div class="comm-hero-content">
+                        <div class="hero-top-label"><i class="fa-solid fa-star-of-life"></i> Connect, Discuss, Discover
+                        </div>
+                        <h2>Community Hub</h2>
+                        <p>Join vibrant discussions, connect with book clubs, and attend literary events.</p>
+                    </div>
+                    <div class="comm-hero-stats">
+                        <div class="hero-stat-box">
+                            <span class="hs-num" id="stat-members">0</span>
+                            <span class="hs-label">Members</span>
+                        </div>
+                        <div class="hero-stat-box">
+                            <span class="hs-num" id="stat-clubs">0</span>
+                            <span class="hs-label">Book Clubs</span>
+                        </div>
+                        <div class="hero-stat-box">
+                            <span class="hs-num" id="stat-events">0</span>
+                            <span class="hs-label">Events</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs -->
+                <div class="comm-tabs-container">
+                    <div class="comm-tabs">
+                        <button class="comm-tab active" id="tab-forums"><i class="fa-regular fa-comments"></i>
+                            Forums</button>
+                        <button class="comm-tab" id="tab-clubs"><i class="fa-solid fa-users-viewfinder"></i> Book
+                            Clubs</button>
+                        <button class="comm-tab" id="tab-events"><i class="fa-regular fa-calendar-check"></i>
+                            Events</button>
+                    </div>
+                </div>
+
+                <div id="content-forums">
+                    <div id="forums-list-view">
+                        <!-- Discussion Forums -->
+                        <section class="forum-section">
+                            <div class="section-header-row">
+                                <div>
+                                    <h3>Discussion Forums</h3>
+                                    <p class="section-desc">Join conversations with fellow book lovers</p>
+                                </div>
+                                <button class="btn-dark-pill" id="btn-new-thread"><i class="fa-solid fa-plus"></i> New
+                                    Thread</button>
+                            </div>
+
+                            <div class="forum-grid">
+                                <!-- Categories Column -->
+                                <div class="forum-categories">
+                                    <h4 class="col-title"><i class="fa-solid fa-hashtag"></i> Categories</h4>
+
+                                    <div class="category-card">
+                                        <div class="cat-icon blue"><i class="fa-regular fa-comments"></i></div>
+                                        <div class="cat-content">
+                                            <h5>General Discussion</h5>
+                                            <p>Talk about anything book-related</p>
+                                            <div class="cat-meta">1247 threads • 5934 posts</div>
+                                            <div class="cat-last">Sarah M. in "What are you reading this week?"</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="category-card">
+                                        <div class="cat-icon orange"><i class="fa-regular fa-star"></i></div>
+                                        <div class="cat-content">
+                                            <h5>Book Recommendations</h5>
+                                            <p>Share and discover new books</p>
+                                            <div class="cat-meta">892 threads • 6421 posts</div>
+                                            <div class="cat-last">Alex K. in "Looking for sci-fi like Dune"</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="category-card">
+                                        <div class="cat-icon purple"><i class="fa-solid fa-user-pen"></i></div>
+                                        <div class="cat-content">
+                                            <h5>Author Discussions</h5>
+                                            <p>Discuss your favorite authors</p>
+                                            <div class="cat-meta">534 threads • 4323 posts</div>
+                                            <div class="cat-last">Mike D. in "Brandon Sanderson's new release"</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="category-card">
+                                        <div class="cat-icon green"><i class="fa-solid fa-book-open"></i></div>
+                                        <div class="cat-content">
+                                            <h5>Writing & Publishing</h5>
+                                            <p>For aspiring and published authors</p>
+                                            <div class="cat-meta">445 threads • 3290 posts</div>
+                                            <div class="cat-last">Emma R. in "Self-publishing tips?"</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Recent Discussions Column -->
+                                <div class="recent-discussions" id="recent-discussions-list">
+                                    <h4 class="col-title"><i class="fa-solid fa-arrow-trend-up"></i> Recent Discussions
+                                    </h4>
+
+                                    <!-- Discussions will be loaded dynamically here -->
+                                </div>
+                            </div>
+
+                        </section>
+                    </div> <!-- End forums-list-view -->
+
+                    <!-- Discussion Detail View (Initially Hidden) -->
+                    <div id="discussion-detail-view" class="hidden">
+                        <a href="javascript:void(0)" class="back-link-integrated" id="back-to-forums">
+                            <i class="fa-solid fa-chevron-left"></i> Back to Forums
+                        </a>
+
+                        <div class="discussion-detail-banner" id="integrated-disc-banner">
+                            <div class="disc-banner-content">
+                                <h2 id="integrated-disc-title">Loading...</h2>
+                                <div class="disc-banner-meta">
+                                    <span id="integrated-disc-author">By ...</span>
+                                    <span class="meta-divider">|</span>
+                                    <span id="integrated-disc-time">Just now</span>
+                                    <span class="meta-divider">|</span>
+                                    <span id="integrated-disc-views">0</span> views
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-main-content">
+                            <div class="main-post-body" id="integrated-disc-content">
+                                <!-- Content injected here -->
+                            </div>
+                            <div class="main-post-tags" id="integrated-disc-tags">
+                                <!-- Tags injected here -->
+                            </div>
+                        </div>
+
+                        <div class="replies-section-integrated">
+                            <h3 class="replies-title"><span id="integrated-replies-count">0</span> Replies</h3>
+                            <div id="integrated-comments-list">
+                                <!-- Comments injected here -->
+                            </div>
+
+                            <div class="reply-form-integrated">
+                                <div class="reply-header">Share your thoughts...</div>
+                                <textarea id="integrated-reply-text"
+                                    placeholder="Be respectful and helpful in the community..."></textarea>
+                                <div class="reply-footer">
+                                    <button class="btn-dark-pill" id="btn-integrated-submit-reply">Post Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End content-forums -->
+
+                <div id="content-clubs" class="hidden">
+                    <div class="section-header-row">
+                        <div>
+                            <h3>Book Clubs</h3>
+                            <p class="section-desc">Join a community of readers who share your interests</p>
+                        </div>
+                        <button class="btn-dark-pill" id="btn-create-club"><i class="fa-solid fa-plus"></i>
+                            Create Club</button>
+                    </div>
+
+                    <div class="clubs-grid" id="clubs-list">
+                        <!-- Club cards will be loaded dynamically here -->
+                    </div>
+                </div>
+
+                <!-- Club Detail View (Initially Hidden) -->
+                <div id="content-club-detail" class="hidden">
+                    <a href="javascript:void(0)" class="back-link-integrated" id="btn-back-to-clubs">
+                        <i class="fa-solid fa-chevron-left"></i> Back to Community
+                    </a>
+
+                    <div class="club-detail-container">
+                        <header class="cd-header" id="club-banner-integrated">
+                            <div class="cd-banner-content">
+                                <div class="cd-info-main">
+                                    <h2 id="club-detail-name">---</h2>
+                                    <p class="cd-desc" id="club-detail-desc">---</p>
+                                    <div class="cd-stats-row">
+                                        <span id="club-detail-members-count"><i class="fa-solid fa-user-group"></i>
+                                            0 members</span>
+                                        <span class="meta-divider">|</span>
+                                        <span><i class="fa-solid fa-book-open"></i> Currently reading: <strong
+                                                id="club-detail-current-book">---</strong></span>
+                                    </div>
+                                </div>
+                                <div class="cd-thumbnail">
+                                    <img src="" alt="Club Cover" id="club-detail-image">
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="cd-tabs-nav">
+                            <button class="cd-nav-tab active" data-tab="discussions">Discussions</button>
+                            <button class="cd-nav-tab" data-tab="members">Members</button>
+                            <button class="cd-nav-tab" data-tab="about">About</button>
+                        </div>
+
+                        <div class="cd-content">
+                            <!-- Discussions Tab Content -->
+                            <div id="club-tab-discussions" class="cd-tab-pane">
+                                <div class="club-posts-list" id="club-messages-list">
+                                    <!-- Messages loaded here -->
+                                </div>
+
+                                <div class="club-input-box">
+                                    <div class="ci-user-avatar" id="club-current-user-avatar">JD</div>
+                                    <div class="ci-input-wrapper">
+                                        <input type="text" id="club-message-input"
+                                            placeholder="Share your thoughts with the club...">
+                                        <div class="ci-tools">
+                                            <button class="btn-send-post" id="btn-send-club-message">Send <i
+                                                    class="fa-solid fa-paper-plane"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Members Tab Content -->
+                            <div id="club-tab-members" class="cd-tab-pane hidden">
+                                <div class="members-grid" id="club-members-grid">
+                                    <!-- Member cards will be loaded here -->
+                                </div>
+                            </div>
+
+                            <!-- About Tab Content -->
+                            <div id="club-tab-about" class="cd-tab-pane hidden">
+                                <div class="about-grid">
+                                    <div class="about-info-card">
+                                        <h4>About This Club</h4>
+                                        <p id="club-detail-about-text"></p>
+                                    </div>
+                                    <div class="about-info-card">
+                                        <h4>Reading Schedule</h4>
+                                        <div class="reading-schedule">
+                                            <div class="schedule-item current">
+                                                <div class="s-book-info">
+                                                    <div class="s-title" id="club-detail-schedule-book">---</div>
+                                                    <div class="s-author" id="club-detail-schedule-author">---</div>
+                                                </div>
+                                                <span class="s-status current">Current</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-info-card danger-zone">
+                                        <h4>Leave Club</h4>
+                                        <button class="btn-leave-club" id="btn-leave-club-actual"><i
+                                                class="fa-solid fa-right-from-bracket"></i> Leave Club</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Section (Initially Hidden) -->
+                <div id="content-events" class="hidden">
+                    <div class="section-header-row">
+                        <div>
+                            <h3>Upcoming Events</h3>
+                            <p class="section-desc">Connect with authors and fellow readers at live events</p>
+                        </div>
+                        <div class="header-actions">
+                            <select class="category-select">
+                                <option>All Categories</option>
+                                <option>Author Talks</option>
+                                <option>Workshops</option>
+                                <option>Book Clubs</option>
+                            </select>
+                            <button class="btn-dark-pill" id="btn-create-event"><i class="fa-solid fa-plus"></i>
+                                Create
+                                Event</button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Events -->
+                    <h4 class="col-title" style="margin-top: 1rem;"><i class="fa-solid fa-star"></i> Featured Events
+                    </h4>
+                    <div class="events-featured-grid" id="events-featured-list">
+                        <!-- Featured Event Cards will be loaded dynamically here -->
+                    </div>
+
+                    <!-- All Events -->
+                    <h4 class="col-title" style="margin-top: 2rem;"><i class="fa-regular fa-calendar-days"></i> All
+                        Events</h4>
+                    <div class="clubs-grid" id="events-grid-list"> <!-- Reusing grid layout -->
+                        <!-- All Event Cards will be loaded dynamically here -->
+                    </div>
+
+                    <!-- Footer (Simple) -->
+                    <div class="comm-footer">
+                        <p>&copy; 2024 BookSphere Community. All rights reserved.</p>
+                    </div>
+                </div> <!-- End dashboard-scroll -->
+        </main>
+        <!-- New Thread Modal -->
+        <div id="new-thread-modal" class="modal-overlay hidden">
+            <div class="modal-content-card">
+                <div class="modal-header">
+                    <h3>Create New Thread</h3>
+                    <button class="icon-btn" id="close-thread-modal"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="modal-subtitle">Start a new discussion in the community forums</p>
+
+                <form id="new-thread-form-integrated">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <div class="select-wrapper">
+                            <select id="thread-category" required>
+                                <option value="General Discussion">General Discussion</option>
+                                <option value="Book Recommendations">Book Recommendations</option>
+                                <option value="Author Discussions">Author Discussions</option>
+                                <option value="Writing & Publishing">Writing & Publishing</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Thread Title</label>
+                        <input type="text" id="thread-title" placeholder="Enter thread title..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Content</label>
+                        <textarea id="thread-content" rows="4" placeholder="Share your thoughts with the community..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tags (comma-separated)</label>
+                        <input type="text" id="thread-tags" placeholder="e.g., discussion, recommendations, fantasy">
+                        <p class="form-hint">Add tags to help others find your thread</p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary-modal" id="cancel-thread-btn">Cancel</button>
+                        <button type="submit" class="btn-primary-modal" style="background:#1e3a8a;"><i
+                                class="fa-solid fa-plus"></i> Create Thread</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Create Event Modal -->
+        <div id="event-modal" class="modal-overlay hidden">
+            <div class="modal-content-lg">
+                <div class="modal-header">
+                    <h2>Create Event</h2>
+                    <p>Organize a literary event for the community</p>
+                    <button class="btn-close-modal" id="close-event-modal"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form id="create-event-form">
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <label for="event-title">Event Title *</label>
+                            <input type="text" id="event-title" placeholder="Enter event title..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-desc">Description *</label>
+                        <textarea id="event-desc" rows="3" placeholder="Describe your event..." required></textarea>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="event-type">Event Type</label>
+                            <select id="event-type">
+                                <option value="In-Person">In-Person</option>
+                                <option value="Online">Online</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-category">Category</label>
+                            <select id="event-category">
+                                <option value="Book Club">Book Club</option>
+                                <option value="Author Talk">Author Talk</option>
+                                <option value="Workshop">Workshop</option>
+                                <option value="Community Event">Community Event</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="event-date">Date (Optional)</label>
+                            <input type="text" id="event-date" placeholder="e.g., Feb 1">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time">Time (Optional)</label>
+                            <input type="text" id="event-time" placeholder="e.g., 7:00 PM">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Location *</label>
+                        <input type="text" id="event-location" placeholder="Enter event location..." required>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="event-host">Host Name (Optional)</label>
+                            <input type="text" id="event-host" placeholder="Your name or organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-max">Max Attendees</label>
+                            <input type="number" id="event-max" value="50">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-image">Image URL (Optional)</label>
+                        <input type="text" id="event-image" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" id="cancel-event-btn">Cancel</button>
+                        <button type="submit" class="btn-create" id="submit-event-btn"><i class="fa-solid fa-plus"></i>
+                            Create Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Event Details Modal -->
+        <div id="event-details-modal" class="modal-overlay hidden">
+            <div class="modal-content-lg event-details-content">
+                <div class="modal-header-image" id="event-details-header-image">
+                    <button class="btn-close-modal-round" id="close-event-details-modal"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="event-details-body">
+                    <h2 id="event-details-title">Event Title</h2>
+                    <div class="event-details-section">
+                        <h4>About This Event</h4>
+                        <p id="event-details-description">Event description...</p>
+                    </div>
+
+                    <div class="event-details-grid">
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-regular fa-calendar"></i></div>
+                            <div class="detail-info">
+                                <span class="detail-label">Date</span>
+                                <span class="detail-value" id="event-details-date">Date</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
+                            <div class="detail-info">
+                                <span class="detail-label">Time</span>
+                                <span class="detail-value" id="event-details-time">Time</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-user-group"></i></div>
+                            <div class="detail-info">
+                                <span class="detail-label">Attendees</span>
+                                <span class="detail-value" id="event-details-attendees">0 / 0</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><i class="fa-regular fa-user"></i></div>
+                            <div class="detail-info">
+                                <span class="detail-label">Host</span>
+                                <span class="detail-value" id="event-details-host">Host</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-details-location">
+                        <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="location-info">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value" id="event-details-location-text">Location</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions-full">
+                        <button id="event-details-action-btn" class="btn-primary-full">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Book Club Modal -->
+        <div id="club-modal" class="modal-overlay hidden">
+            <div class="modal-content-card">
+                <div class="modal-header">
+                    <h3>Create Book Club</h3>
+                    <button class="icon-btn" id="close-club-modal"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="modal-subtitle">Start a new book club for readers who share your interests</p>
+
+                <form id="create-club-form-integrated">
+                    <div class="form-group">
+                        <label for="club-name">Club Name *</label>
+                        <input type="text" id="club-input-name" placeholder="Enter club name..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="club-description">Description *</label>
+                        <textarea id="club-input-description" rows="3" placeholder="Describe your book club..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="club-category">Category</label>
+                        <div class="select-wrapper">
+                            <select id="club-input-category" required>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Non-Fiction">Non-Fiction</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Science Fiction">Science Fiction</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Business">Business</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="club-current-book">Current Book (Optional)</label>
+                            <input type="text" id="club-input-current-book" placeholder="Book title">
+                        </div>
+                        <div class="form-group">
+                            <label for="club-author">Author (Optional)</label>
+                            <input type="text" id="club-input-author" placeholder="Author name">
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="club-schedule">Meeting Schedule (Optional)</label>
+                            <input type="text" id="club-input-schedule" placeholder="e.g., Every Tuesday">
+                        </div>
+                        <div class="form-group">
+                            <label for="club-next-meeting">Next Meeting (Optional)</label>
+                            <input type="text" id="club-input-next-meeting" placeholder="e.g., Feb 1, 7:00 PM">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="club-image">Image URL (Optional)</label>
+                        <input type="text" id="club-input-image" placeholder="https://example.com/image.jpg">
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary-modal"
+                            id="cancel-club-btn-integrated">Cancel</button>
+                        <button type="submit" class="btn-primary-modal" style="background:#c2410c;"><i
+                                class="fa-solid fa-plus"></i> Create Club</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/community.js"></script>
+        <script src="js/chat.js"></script>
+
+</html>

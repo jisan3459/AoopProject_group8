@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li>
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-regular fa-user"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>Profile</h1>
+                        <p>Your reading journey and achievements</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">AL</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- Profile Hero -->
+                <section class="profile-hero">
+                    <div class="profile-header-content">
+                        <div class="profile-main-info">
+                            <div class="profile-avatar-lg">AL</div>
+                            <div class="profile-text-info">
+                                <h2>Alex Li</h2>
+                                <p class="join-date">Bookworm since March 2023</p>
+                                <div class="profile-badges">
+                                    <span class="p-badge">Level 3 Reader</span>
+                                    <span class="p-badge">Science Fiction</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-settings-light"><i class="fa-solid fa-gear"></i> Settings</button>
+                    </div>
+
+                    <div class="points-card">
+                        <div class="pc-left">
+                            <div class="pc-icon"><i class="fa-solid fa-coins"></i></div>
+                            <div>
+                                <div class="pc-label">Total Swap Points</div>
+                                <div class="pc-value" id="hero-swap-points">125 <span class="unit">pts</span></div>
+                            </div>
+                            <div class="pc-divider"></div>
+                            <div class="pc-promo">
+                                <i class="fa-solid fa-star-of-life"></i>
+                                Earn more by<br>donating & swapping!
+                            </div>
+                        </div>
+                        <button class="btn-redeem">Redeem</button>
+                    </div>
+                </section>
+
+                <!-- Tabs -->
+                <div class="comm-tabs-container">
+                    <div class="comm-tabs">
+                        <button class="comm-tab active" id="tab-overview">Overview</button>
+                        <button class="comm-tab" id="tab-history">History</button>
+                        <button class="comm-tab" id="tab-expenses">Expenses</button>
+                        <button class="comm-tab" id="tab-reminders">Reminders</button>
+                        <button class="comm-tab" id="tab-points">Points</button>
+                    </div>
+                </div>
+
+                <!-- Sections -->
+                <div id="section-overview" class="profile-section">
+                    <h3 class="section-title">Reading Stats</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="sb-icon orange"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <div class="sb-value" id="stats-books-donated">0</div>
+                            <div class="sb-label">Books Donated</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="sb-icon red"><i class="fa-regular fa-heart"></i></div>
+                            <div class="sb-value" id="overview-contributed">$0</div>
+                            <div class="sb-label">Funds Donated</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="sb-icon yellow"><i class="fa-solid fa-coins"></i></div>
+                            <div class="sb-value" id="overview-points">125</div>
+                            <div class="sb-label">Swap Points</div>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Achievements</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="ac-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h4>Speed Reader</h4>
+                            <p>Read 5 books in a month</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ac-icon blue"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h4>Genre Explorer</h4>
+                            <p>Read books from 10 different genres</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ac-icon orange"><i class="fa-solid fa-fire"></i></div>
+                            <h4>Consistent Reader</h4>
+                            <p>Maintain a 30-day reading streak</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ac-icon yellow"><i class="fa-solid fa-handshake-angle"></i></div>
+                            <h4>Community Helper</h4>
+                            <p>Help 10 people find books</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ac-icon red"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <h4>Generous Donor</h4>
+                            <p>Donate 10 books</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ac-icon green"><i class="fa-solid fa-sack-dollar"></i></div>
+                            <h4>Point Collector</h4>
+                            <p>Earn 500 swap points</p>
+                            <div class="ac-status locked"><i class="fa-solid fa-lock"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="section-history" class="profile-section hidden">
+                    <h3 class="section-title">Complete Reading History</h3>
+                    <div class="empty-state-card" style="margin-top: 2rem;">
+                        <div class="empty-icon-circle"><i class="fa-solid fa-book-open"></i></div>
+                        <h3>No Reading History Yet</h3>
+                        <p>Start reading books to see your activity here</p>
+                        <a href="ebooks.html" class="btn btn-orange"
+                            style="display:inline-block; padding: 0.8rem 2rem; text-decoration: none; border-radius: 8px; margin-top: 1rem;">Browse
+                            E-Books</a>
+                    </div>
+                </div>
+
+                <div id="section-expenses" class="profile-section hidden">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="sb-icon orange"><i class="fa-solid fa-dollar-sign"></i></div>
+                            <div class="sb-value" id="stats-total-contributed">$0.00</div>
+                            <div class="sb-label">Total Funds Donated</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="sb-icon orange"><i class="fa-regular fa-heart"></i></div>
+                            <div class="sb-value" id="stats-contribution-count">0</div>
+                            <div class="sb-label">Total Contributions</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="sb-icon orange"><i class="fa-regular fa-clock"></i></div>
+                            <div class="sb-value" id="stats-avg-contribution">$0.00</div>
+                            <div class="sb-label">Avg Per Contribution</div>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Contribution History</h3>
+                    <div id="contribution-history-list" class="activity-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div id="section-reminders" class="profile-section hidden">
+                    <div class="settings-card">
+                        <h3 style="margin-bottom: 1.5rem;">Reading Habit Reminders</h3>
+
+                        <div class="reminder-item-row">
+                            <div class="reminder-info">
+                                <h4>Daily Reading Reminder</h4>
+                                <p>Get reminded to read at your preferred time</p>
+                                <div class="reminder-time-selector">
+                                    <span>Reminder Time</span>
+                                    <input type="time" value="20:00" class="time-input">
+                                </div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="reminder-item-row">
+                            <div class="reminder-info">
+                                <h4>Goal Progress Reminders</h4>
+                                <p>Weekly updates on your reading goals</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="reminder-item-row">
+                            <div class="reminder-info">
+                                <h4>Streak Reminders</h4>
+                                <p>Don't break your reading streak!</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <button class="btn-full btn-gradient"
+                            style="margin-top: 2rem; width: 100%; padding: 1rem; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; color: white;">Save
+                            Reminder Settings</button>
+                    </div>
+                </div>
+
+                <div id="section-points" class="profile-section hidden">
+                    <div class="points-hero-card">
+                        <div class="phc-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="phc-value" id="points-hero-value">125</div>
+                        <div class="phc-label">Total Swap Points</div>
+                        <p>Keep donating and swapping to earn more!</p>
+                        <button class="btn btn-white"
+                            style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600;"><i
+                                class="fa-solid fa-gift"></i> Redeem Points</button>
+                    </div>
+
+                    <h3 class="section-title">How to Earn Swap Points</h3>
+                    <div class="earn-points-list">
+                        <div class="earn-item">
+                            <div class="earn-icon blue"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="earn-info">
+                                <h4>Donate books</h4>
+                                <p>Help spread literacy</p>
+                            </div>
+                            <div class="earn-value">+50 pts/book</div>
+                        </div>
+                        <div class="earn-item">
+                            <div class="earn-icon purple"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="earn-info">
+                                <h4>Back crowdfunding campaigns</h4>
+                                <p>Support emerging authors</p>
+                            </div>
+                            <div class="earn-value">+5 pts/$1</div>
+                        </div>
+                        <div class="earn-item">
+                            <div class="earn-icon orange"><i class="fa-solid fa-repeat"></i></div>
+                            <div class="earn-info">
+                                <h4>Swap books</h4>
+                                <p>Exchange with other readers</p>
+                            </div>
+                            <div class="earn-value">+25 pts/swap</div>
+                        </div>
+                        <div class="earn-item">
+                            <div class="earn-icon green"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="earn-info">
+                                <h4>Complete reading goal</h4>
+                                <p>Finish monthly target</p>
+                            </div>
+                            <div class="earn-value">+100 pts</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <!-- Redeem Points Modal -->
+    <div id="redeem-modal" class="modal-overlay hidden">
+        <div class="modal-content-card redeem-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-gift"></i> Redeem Rewards</h3>
+                <button class="icon-btn" id="close-redeem-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="redeem-points-balance">
+                <div class="balance-info">
+                    <span class="label">Available Balance</span>
+                    <div class="balance-value"><span id="modal-points-balance">125</span> <span class="unit">pts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-tabs">
+                <button class="m-tab active" data-category="ALL">All Rewards</button>
+                <button class="m-tab" data-category="DISCOUNT">Discounts</button>
+                <button class="m-tab" data-category="FREE_BOOK">Free Books</button>
+                <button class="m-tab" data-category="PREMIUM">Premium</button>
+            </div>
+
+            <div class="rewards-scroll">
+                <div id="rewards-grid" class="rewards-grid">
+                    <!-- Dynamic reward cards will be loaded here -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        <p>Loading rewards...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

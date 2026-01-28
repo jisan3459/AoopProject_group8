@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Dashboard - BookSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <style>
+        /* Reader Dashboard Specific Styles */
+        .reader-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #E87A38 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reader-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 60%;
+        }
+
+        .rh-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .rh-label i {
+            color: #FFD700;
+        }
+
+        .reader-hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .reader-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .rh-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-white-solid {
+            background: white;
+            color: #1e293b;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-white-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .continue-reading-card-hero {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .crh-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .crh-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .crh-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-glass-full {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-glass-full:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Improved Stats Grid (Large) */
+        .stats-large-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card-large {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .stat-card-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .scl-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .scl-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .scl-content p {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Section Header Layout */
+        .section-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header-flex h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .btn-view-all {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .btn-view-all:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon-sm"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="logo-text">
+                        <span class="brand">BookSphere</span>
+                        <span class="tagline">Your reading universe</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-label">NAVIGATION</div>
+                <ul>
+                    <li class="active">
+                        <a href="dashboard-reader.html">
+                            <i class="fa-solid fa-house"></i>
+                            <div>
+                                <span class="nav-item-title">Dashboard</span>
+                                <span class="nav-item-desc">Overview and recommendations</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-library.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <span class="nav-item-title">My Library</span>
+                                <span class="nav-item-desc">Your book collection</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ebooks.html">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                            <div>
+                                <span class="nav-item-title">E-Books</span>
+                                <span class="nav-item-desc">Digital book downloads</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book-swap.html">
+                            <i class="fa-solid fa-repeat"></i>
+                            <div>
+                                <span class="nav-item-title">Book Swap</span>
+                                <span class="nav-item-desc">Exchange books with others</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <span class="nav-item-title">Community</span>
+                                <span class="nav-item-desc">Book clubs and discussions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="donate-books.html">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <div>
+                                <span class="nav-item-title">Donate Books</span>
+                                <span class="nav-item-desc">Support literacy programs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fund-authors.html">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div>
+                                <span class="nav-item-title">Fund Authors</span>
+                                <span class="nav-item-desc">Back new book projects</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <span class="nav-item-title">Profile</span>
+                                <span class="nav-item-desc">Account and reading stats</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="support.html"><i class="fa-regular fa-circle-question"></i> Help & Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="breadcrumb-icon"><i class="fa-solid fa-house"></i></div>
+                    <div class="breadcrumb-text">
+                        <h1>Dashboard</h1>
+                        <p>Your reading universe at a glance</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search books, authors, or friends...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot"></span>
+                    </button>
+                    <button class="btn btn-sm btn-white">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Browse Books
+                    </button>
+                    <div class="user-avatar">SH</div>
+                </div>
+            </header>
+
+            <div class="dashboard-scroll">
+
+                <!-- 1. Hero Section -->
+                <section class="reader-hero">
+                    <div class="reader-hero-content">
+                        <div class="rh-label"><i class="fa-solid fa-star"></i> Welcome back to your reading universe
+                        </div>
+                        <h2>Continue Your Literary Journey</h2>
+                        <p>Discover new worlds, track your progress, and connect with fellow book lovers.</p>
+                        <div class="rh-actions">
+                            <a href="my-library.html" class="btn-white-solid"><i class="fa-solid fa-book-open"></i> My
+                                Library</a>
+                            <a href="ebooks.html" class="btn-glass"><i class="fa-solid fa-download"></i> Browse
+                                E-Books</a>
+                        </div>
+                    </div>
+
+                    <div class="continue-reading-card-hero">
+                        <div class="crh-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h4 class="crh-title">No Books in Progress</h4>
+                        <p class="crh-subtitle">Start reading to see your progress here</p>
+                        <a href="ebooks.html" class="btn-glass-full">Browse E-Books</a>
+                    </div>
+                </section>
+
+                <!-- 2. Upcoming Events -->
+                <section class="dashboard-section">
+                    <div class="section-header-flex">
+                        <h3>Your Upcoming Events</h3>
+                        <a href="community.html" class="btn-view-all"><i class="fa-regular fa-calendar"></i> View All
+                            Events</a>
+                    </div>
+                    <!-- Dynamically populated -->
+                    <div id="dashboard-events-list" class="events-horizontal-list">
+                        <div class="empty-state-text">You haven't registered for any events yet.</div>
+                    </div>
+                </section>
+
+                <!-- 3. Reading Statistics -->
+                <section class="dashboard-section" style="margin-top: 3rem;">
+                    <div class="section-header-flex">
+                        <h3>Reading Statistics</h3>
+                        <a href="profile.html" class="btn-view-all"><i class="fa-regular fa-eye"></i> View Details</a>
+                    </div>
+                    <div class="stats-large-grid">
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #a855f7;"><i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div class="scl-content">
+                                <h3 id="stat-books-library">0</h3>
+                                <p>Books in Library</p>
+                            </div>
+                        </div>
+                        <div class="stat-card-large">
+                            <div class="scl-icon" style="background: #f97316;"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <div class="scl-content">
+                                <h3 id="stat-funds-donated">$0</h3>
+                                <p>Funds Donated</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Event Details Modal -->
+    <div id="event-details-modal" class="modal-overlay hidden">
+        <div class="modal-content-lg event-details-content">
+            <div class="modal-header-image" id="event-details-header-image">
+                <button class="btn-close-modal-round" id="close-event-details-modal"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="event-details-body">
+                <h2 id="event-details-title">Event Title</h2>
+                <div class="event-details-section">
+                    <h4>About This Event</h4>
+                    <p id="event-details-description">Event description...</p>
+                </div>
+
+                <div class="event-details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-regular fa-calendar"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Date</span>
+                            <span class="detail-value" id="event-details-date">Date</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Time</span>
+                            <span class="detail-value" id="event-details-time">Time</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-solid fa-user-group"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Attendees</span>
+                            <span class="detail-value" id="event-details-attendees">0 / 0</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fa-regular fa-user"></i></div>
+                        <div class="detail-info">
+                            <span class="detail-label">Host</span>
+                            <span class="detail-value" id="event-details-host">Host</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-details-location">
+                    <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="location-info">
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value" id="event-details-location-text">Location</span>
+                    </div>
+                </div>
+
+                <div class="modal-actions-full">
+                    <button id="event-details-action-btn" class="btn-primary-full">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
